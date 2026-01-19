@@ -1,6 +1,5 @@
 #!/bin/sh
 
-. ../../lib/lib.sh
 
 steamos() {
     rootdo pacman -S --noconfirm python-argcomplete

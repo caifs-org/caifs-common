@@ -2,7 +2,6 @@
 # Installs some nicely curated global ignores
 # Check out https://github.com/github/gitignore for more
 
-. ../../lib/lib.sh
 
 
 GLOBAL_IGNORES="\

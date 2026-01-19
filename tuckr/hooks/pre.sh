@@ -1,6 +1,5 @@
 #!/bin/sh
 
-. ../../lib/lib.sh
 
 linux() {
     if [ ! -f $HOME/.local/bin/tuckr ]; then

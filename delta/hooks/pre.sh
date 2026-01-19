@@ -1,6 +1,5 @@
 #!/bin/sh
 
-. ../../lib/lib.sh
 
 arch() {
     rootdo pacman -S --noconfirm git-delta

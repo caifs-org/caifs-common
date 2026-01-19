@@ -1,6 +1,5 @@
 #!/bin/sh
 
-. ../../lib/lib.sh
 
 fedora() {
     rootdo dnf -y copr enable chronoscrat/starship

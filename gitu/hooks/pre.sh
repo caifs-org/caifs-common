@@ -1,6 +1,5 @@
 #!/bin/sh
 
-. ../../lib/lib.sh
 
 linux() {
     LATEST_VERSION=$(github_latest_tag "altsem/gitu")

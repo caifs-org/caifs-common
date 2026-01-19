@@ -1,6 +1,5 @@
 #!/bin/sh
 
-. ../../lib/lib.sh
 
 debian() {
     # Add Docker's official GPG key:

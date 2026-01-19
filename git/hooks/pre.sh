@@ -1,6 +1,5 @@
 #!/bin/sh
 
-. ../../lib/lib.sh
 
 echo "Gathering some information that will be used for git work or private  configurations"
 printf "%-50s\n" "Is this a [work] or [private] configuration? [default private]"

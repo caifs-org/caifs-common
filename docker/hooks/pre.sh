@@ -1,6 +1,5 @@
 #!/bin/sh
 
-. ../../lib/lib.sh
 
 fedora() {
     rootdo dnf config-manager addrepo --from-repofile https://download.docker.com/linux/$OS_ID/docker-ce.repo

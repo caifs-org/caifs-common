@@ -1,6 +1,5 @@
 #!/bin/sh
 
-. ../../lib/lib.sh
 
 fedora() {
    installs="emacs-pgtk aspell aspell-en"

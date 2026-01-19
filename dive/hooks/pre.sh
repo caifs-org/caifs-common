@@ -1,6 +1,5 @@
 #!/bin/sh
 
-. ../../lib/lib.sh
 
 fedora() {
     LATEST_VERSION=$(github_latest_tag "wagoodman/dive")

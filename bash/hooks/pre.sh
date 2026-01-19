@@ -1,6 +1,5 @@
 #!/bin/sh
 
-. ../../lib/lib.sh
 
 # Make the completions directory in advance, which will be used for dynamic and static completions
 generic() {
