@@ -12,5 +12,5 @@ fedora() {
 
 
 generic() {
-    uv_install --prerelease allow azure-cli@latest
+    uv_install azure-cli
 }
