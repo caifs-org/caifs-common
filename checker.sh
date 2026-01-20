@@ -1,6 +1,6 @@
 #!/bin/sh
 
-HOOK_SCRIPTS=$(find Hooks/ -name "pre*" -or -name "post*" -or -name "rm*" -type f)
+HOOK_SCRIPTS=$(find . -name "pre*" -or -name "post*" -or -name "rm*" -type f)
 RET_CODE=0
 
 for hs in $HOOK_SCRIPTS; do
