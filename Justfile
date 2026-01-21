@@ -7,7 +7,7 @@ help:
 
 [script]
 install-caifs:
-    curl -sL curl -sL https://github.com/caifs-org/caifs/install.sh | sh
+    curl -sL https://raw.githubusercontent.com/caifs-org/caifs/refs/heads/main/install.sh | sh
 
 [script]
 install-caifs-runner-deps:
