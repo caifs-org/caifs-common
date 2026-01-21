@@ -1,4 +1,4 @@
-# CAIFS Common Collection
+# CAIFS Common Collection (v0.0.1)
 
 A collection of CAIFS enabled installers and general purpose configuration that can be enabled via CAIFS
 <https://github.com/caifs-org/caifs>
