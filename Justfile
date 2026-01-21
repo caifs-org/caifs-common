@@ -22,9 +22,11 @@ bump-version $patch="" $minor="" $major="" *args:
     bump-my-version bump --verbose $patch $minor $major {{ args }}
 
 
+[script]
 create-release-tar:
     tar --exclude-from .tarignore --transform 's,^,caifs-common/,' -czvf release.tar.gz *
 
+[script]
 list-release-tar-files:
     tar -ztf release.tar.gz
 
