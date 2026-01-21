@@ -1,6 +1,8 @@
 #!/bin/sh
 
-
+arch() {
+    arch_install glab
+}
 
 linux() {
     VERSION=$(gitlab_latest_tag "gitlab-org%2Fcli")

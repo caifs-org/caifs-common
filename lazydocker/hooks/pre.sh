@@ -1,5 +1,8 @@
 #!/bin/sh
 
+arch() {
+    yay_install lazydocker
+}
 
 linux() {
     # This works for both linux and macos, however some might prefer to install from homebrew

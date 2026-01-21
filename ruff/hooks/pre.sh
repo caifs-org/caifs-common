@@ -1,4 +1,5 @@
 #!/bin/sh
 
-
-uv_install ruff
+generic() {
+    uv_install ruff
+}

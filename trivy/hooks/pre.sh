@@ -1,6 +1,10 @@
 #!/bin/sh
 
 
+arch() {
+    yay_install trivy
+}
+
 macos() {
     brew install trivy
 }

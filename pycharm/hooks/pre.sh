@@ -1,6 +1,9 @@
 #!/bin/sh
 
 
+arch() {
+    yay_install pycharm
+}
 
 linux() {
     VERSION=${PYCHARM_VERSION:-"2025.3.1"}

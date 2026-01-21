@@ -1,6 +1,8 @@
 #!/bin/sh
 
-
+arch() {
+    yay_install just-lsp
+}
 
 linux() {
     LATEST_VERSION=$(github_latest_tag "terror/just-lsp")

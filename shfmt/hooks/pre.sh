@@ -1,5 +1,10 @@
 #!/bin/sh
 
+
+arch() {
+    yay_install shfmt
+}
+
 linux() {
     LATEST_VERSION=$(github_latest_tag "mvdan/sh")
     VERSION=${SHFMT_VERSION:-$LATEST_VERSION}
