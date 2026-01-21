@@ -1,4 +1,5 @@
 set export
+set shell := [ "/bin/sh" ]
 
 # List available recipes
 help:
