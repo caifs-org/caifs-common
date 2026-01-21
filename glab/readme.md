@@ -1,0 +1,17 @@
+# glab
+
+GitLab CLI tool for interacting with GitLab APIs
+
+```text
+glab
+├── hooks
+│   └── pre.sh
+└── readme.md
+
+2 directories, 2 files
+```
+
+## Supported target systems
+
+- arch
+- linux
