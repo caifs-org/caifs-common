@@ -30,6 +30,7 @@ jobs:
         run: |
           just install-caifs
           just install-caifs-runner-deps
+          just pre-commit-install
 
       # Runs a single command using the runners shell
       - name: Run the tests
