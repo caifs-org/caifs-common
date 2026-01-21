@@ -1,5 +1,7 @@
 # delta
 
+Syntax-highlighting pager for git diffs
+
 ```text
 delta
 ├── config

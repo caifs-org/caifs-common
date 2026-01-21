@@ -1,5 +1,7 @@
 # cruft
 
+CookieCutter template manager
+
 ```text
 cruft
 ├── hooks

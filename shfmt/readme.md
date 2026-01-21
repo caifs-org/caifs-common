@@ -1,5 +1,7 @@
 # shfmt
 
+Shell script formatter
+
 ```text
 shfmt
 ├── hooks

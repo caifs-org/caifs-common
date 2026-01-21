@@ -1,5 +1,7 @@
 # lazydocker
 
+TUI for managing local docker containers
+
 ```text
 lazydocker
 ├── hooks

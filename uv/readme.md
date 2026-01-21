@@ -1,5 +1,7 @@
 # uv
 
+Python dependency management
+
 ```text
 uv
 ├── hooks

@@ -1,5 +1,7 @@
 # pyright
 
+Microsoft Python language server
+
 ```text
 pyright
 ├── hooks

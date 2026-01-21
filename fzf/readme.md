@@ -1,5 +1,7 @@
 # fzf
 
+Fast fuzzy finder utility
+
 ```text
 fzf
 ├── hooks

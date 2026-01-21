@@ -1,5 +1,7 @@
 # rumdl
 
+A modern Markdown linter and formatter, built for speed with Rust
+
 ```text
 rumdl
 ├── config

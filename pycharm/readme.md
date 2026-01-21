@@ -1,5 +1,7 @@
 # pycharm
 
+JetBrains Python IDE
+
 ```text
 pycharm
 ├── config

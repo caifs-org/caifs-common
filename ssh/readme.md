@@ -1,5 +1,7 @@
 # ssh
 
+SSH config.d directory setup
+
 ```text
 ssh
 ├── config

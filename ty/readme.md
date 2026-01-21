@@ -1,5 +1,7 @@
 # ty
 
+An extremely fast python type checker and language server from Astral
+
 ```text
 ty
 ├── hooks

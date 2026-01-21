@@ -1,5 +1,7 @@
 # bun
 
+Fast JavaScript runtime and package manager
+
 ```text
 bun
 ├── hooks

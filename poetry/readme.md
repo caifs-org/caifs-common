@@ -1,5 +1,7 @@
 # poetry
 
+A perfectly fine python project management tool, but deprecated in favour of uv now
+
 ```text
 poetry
 ├── hooks

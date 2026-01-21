@@ -1,5 +1,7 @@
 # pre-commit
 
+Run checks and validation before committing to git
+
 ```text
 pre-commit
 ├── hooks

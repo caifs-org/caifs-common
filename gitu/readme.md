@@ -1,5 +1,7 @@
 # gitu
 
+TUI for git interaction, based on magit
+
 ```text
 gitu
 ├── hooks

@@ -1,5 +1,7 @@
 # basedpyright
 
+A based version of the pyright lang server with saner defaults
+
 ```text
 basedpyright
 ├── hooks

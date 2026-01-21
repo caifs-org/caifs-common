@@ -1,5 +1,7 @@
 # fd
 
+Fast find alternative written in Rust
+
 ```text
 fd
 ├── hooks

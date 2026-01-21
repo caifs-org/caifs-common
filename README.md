@@ -98,46 +98,56 @@ way I like to keep the contents of that file within a dedicated password manager
 
 ## Supported installs
 
-| Software target      | Description                                                                         |
-|:---------------------|:------------------------------------------------------------------------------------|
-| ansible              | Configuration automation tool for                                                   |
-| awscli               | Official AWS CLI                                                                    |
-| azure-cli            | Official Azure CLI                                                                  |
-| basedpyright         | A based version of the pyright lang server with saner defaults                      |
-| bash                 | some nice, minimal configuration for bash shells                                    |
-| bash-language-server | LSP server for bash and sh                                                          |
-| bump-my-version      | CLI for applying semver practices to git repos                                      |
-| cruft                | CookieCutter template manager                                                       |
-| direnv               | manage environment variables per directory                                          |
-| dive                 | TUI tool for inspecting docker images                                               |
-| docker               | Docker community edition engine & CLI tooling                                       |
-| docker-cli           | Docker CE CLI tooling only, no engine install                                       |
-| editorConfig         | default editor configurations for maintaining consistency between teams             |
-| fd                   | fd is a fast find alternative written in rust                                       |
-| fzf                  | fast fuzzy finder utility                                                           |
-| git                  | some nice configuration specifically for work                                       |
-| gitu                 | TUI for git interaction, based on magit                                             |
-| glab                 | gitlab CLI tool for interacting with gitlab apis                                    |
-| just                 | a command runner, inspired by make but much better                                  |
-| just-lsp             | LSP server for Just                                                                 |
-| lazydocker           | tui for managing local docker containers                                            |
-| nodejs               | Javascript runtime (mainly used for managing packages via this tool) see NVM        |
-| nvm                  | manage multiple node versions                                                       |
-| oras                 | CLI tool for interfacing with OCI objects                                           |
-| pandoc               | Markup conversion tool                                                              |
-| poetry               | a perfectly fine python project management tool, but deprecated in favour of uv now |
-| pre-commit           | run checks and validation before committing to git                                  |
-| pyright              | M$ Python Language server                                                           |
-| ripgrep              | A faster, enhanced version of grep. Often integrated into editors                   |
-| ruff                 | extremely fast linter for python                                                    |
-| rumdl                | A modern Markdown linter and formatter, built for speed with Rust                   |
-| starship             | a terminal prompt prettier, written in rust                                         |
-| tmux                 | A terminal multiplexer                                                              |
-| trivy                | container image scanning tool                                                       |
-| ty                   | An extremely fast python type checker and language server from astral               |
-| uv                   | Python dependency management                                                        |
-| watchexec            | monitor file changes and run commands                                               |
-| zsh                  | some nice, minimal configuration for zsh shells                                     |
+| Software target                         | Description                                                                         |
+|:----------------------------------------|:------------------------------------------------------------------------------------|
+| [ansible](ansible/)                     | Configuration automation tool                                                       |
+| [awscli](awscli/)                       | Official AWS CLI                                                                    |
+| [azure-cli](azure-cli/)                 | Official Azure CLI                                                                  |
+| [basedpyright](basedpyright/)           | A based version of the pyright lang server with saner defaults                      |
+| [bash](bash/)                           | Some nice, minimal configuration for bash shells                                    |
+| [bash-language-server](bash-language-server/) | LSP server for bash and sh                                                    |
+| [bump-my-version](bump-my-version/)     | CLI for applying semver practices to git repos                                      |
+| [bun](bun/)                             | Fast JavaScript runtime and package manager                                         |
+| [cruft](cruft/)                         | CookieCutter template manager                                                       |
+| [delta](delta/)                         | Syntax-highlighting pager for git diffs                                             |
+| [direnv](direnv/)                       | Manage environment variables per directory                                          |
+| [dive](dive/)                           | TUI tool for inspecting docker images                                               |
+| [docker](docker/)                       | Docker community edition engine & CLI tooling                                       |
+| [docker-cli](docker-cli/)               | Docker CE CLI tooling only, no engine install                                       |
+| [editorconfig](editorconfig/)           | Default editor configurations for maintaining consistency between teams             |
+| [fd](fd/)                               | Fast find alternative written in Rust                                               |
+| [fzf](fzf/)                             | Fast fuzzy finder utility                                                           |
+| [git](git/)                             | Some nice configuration specifically for work                                       |
+| [gitu](gitu/)                           | TUI for git interaction, based on magit                                             |
+| [glab](glab/)                           | GitLab CLI tool for interacting with GitLab APIs                                    |
+| [just](just/)                           | A command runner, inspired by make but much better                                  |
+| [just-lsp](just-lsp/)                   | LSP server for Just                                                                 |
+| [lazydocker](lazydocker/)               | TUI for managing local docker containers                                            |
+| [marksman](marksman/)                   | LSP server for Markdown                                                             |
+| [nodejs](nodejs/)                       | Javascript runtime (mainly used for managing packages via this tool) see NVM        |
+| [nvm](nvm/)                             | Manage multiple node versions                                                       |
+| [oras](oras/)                           | CLI tool for interfacing with OCI objects                                           |
+| [pandoc](pandoc/)                       | Markup conversion tool                                                              |
+| [poetry](poetry/)                       | A perfectly fine python project management tool, but deprecated in favour of uv now |
+| [pre-commit](pre-commit/)               | Run checks and validation before committing to git                                  |
+| [pycharm](pycharm/)                     | JetBrains Python IDE                                                                |
+| [pyright](pyright/)                     | Microsoft Python language server                                                    |
+| [ripgrep](ripgrep/)                     | A faster, enhanced version of grep. Often integrated into editors                   |
+| [ruff](ruff/)                           | Extremely fast linter for Python                                                    |
+| [rumdl](rumdl/)                         | A modern Markdown linter and formatter, built for speed with Rust                   |
+| [shellcheck](shellcheck/)               | Static analysis tool for shell scripts                                              |
+| [shfmt](shfmt/)                         | Shell script formatter                                                              |
+| [ssh](ssh/)                             | SSH config.d directory setup                                                        |
+| [starship](starship/)                   | A terminal prompt prettier, written in Rust                                         |
+| [terraform](terraform/)                 | Infrastructure as code tool by HashiCorp                                            |
+| [tmux](tmux/)                           | A terminal multiplexer                                                              |
+| [trivy](trivy/)                         | Container image scanning tool                                                       |
+| [tuckr](tuckr/)                         | Dotfile symlink manager                                                             |
+| [ty](ty/)                               | An extremely fast python type checker and language server from Astral               |
+| [uv](uv/)                               | Python dependency management                                                        |
+| [watchexec](watchexec/)                 | Monitor file changes and run commands                                               |
+| [youtube-dl](youtube-dl/)               | YouTube video downloader (yt-dlp)                                                   |
+| [zsh](zsh/)                             | Some nice, minimal configuration for zsh shells                                     |
 
 > [!TIP]
 > All can be installed and configured via `caifs add <name of target>`

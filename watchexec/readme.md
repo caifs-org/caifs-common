@@ -1,5 +1,7 @@
 # watchexec
 
+Monitor file changes and run commands
+
 ```text
 watchexec
 ├── hooks

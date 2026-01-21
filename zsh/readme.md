@@ -1,5 +1,7 @@
 # zsh
 
+Some nice, minimal configuration for zsh shells
+
 ```text
 zsh
 ├── config

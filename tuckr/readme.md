@@ -1,5 +1,7 @@
 # tuckr
 
+Dotfile symlink manager
+
 ```text
 tuckr
 ├── hooks

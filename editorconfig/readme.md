@@ -1,5 +1,7 @@
 # editorconfig
 
+Default editor configurations for maintaining consistency between teams
+
 ```text
 editorconfig
 ├── config

@@ -1,5 +1,7 @@
 # just-lsp
 
+LSP server for Just
+
 ```text
 just-lsp
 ├── hooks

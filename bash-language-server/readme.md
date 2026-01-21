@@ -1,5 +1,7 @@
 # bash-language-server
 
+LSP server for bash and sh
+
 ```text
 bash-language-server
 ├── hooks

@@ -1,5 +1,7 @@
 # nodejs
 
+Javascript runtime (mainly used for managing packages via this tool) see NVM
+
 ```text
 nodejs
 ├── hooks

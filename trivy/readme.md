@@ -1,5 +1,7 @@
 # trivy
 
+Container image scanning tool
+
 ```text
 trivy
 ├── hooks

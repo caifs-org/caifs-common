@@ -1,5 +1,7 @@
 # ruff
 
+Extremely fast linter for Python
+
 ```text
 ruff
 ├── config

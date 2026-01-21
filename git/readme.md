@@ -1,5 +1,7 @@
 # git
 
+Some nice configuration specifically for work
+
 ```text
 git
 ├── config

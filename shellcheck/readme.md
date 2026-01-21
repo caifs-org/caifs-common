@@ -1,5 +1,7 @@
 # shellcheck
 
+Static analysis tool for shell scripts
+
 ```text
 shellcheck
 ├── hooks

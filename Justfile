@@ -51,10 +51,14 @@ pre-commit-run:
 generate-target-readmes:
     for target in $(ls -d */hooks 2>/dev/null | sed 's|/hooks||'); do
         echo "Generating $target/readme.md"
+        # Extract description from README.md table
+        description=$(grep "\[$target\]" README.md | awk -F'|' '{print $3}' | sed 's/^[[:space:]]*//;s/[[:space:]]*$//')
         # Extract supported systems from pre.sh function definitions
         systems=$(grep -oE '^\s*\w+\s*\(\)|^\w+\(\)' "$target/hooks/pre.sh" 2>/dev/null | sed 's/[[:space:]]*()//g; s/[[:space:]]//g' | sort | while read -r sys; do echo "- $sys"; done)
         cat > "$target/readme.md" << EOF
     # $target
+
+    $description
 
     \`\`\`text
     $(tree -a "$target")

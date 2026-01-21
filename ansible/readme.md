@@ -1,5 +1,7 @@
 # ansible
 
+Configuration automation tool
+
 ```text
 ansible
 ├── hooks

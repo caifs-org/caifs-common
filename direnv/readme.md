@@ -1,5 +1,7 @@
 # direnv
 
+Manage environment variables per directory
+
 ```text
 direnv
 ├── config

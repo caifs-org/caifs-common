@@ -1,5 +1,7 @@
 # youtube-dl
 
+YouTube video downloader (yt-dlp)
+
 ```text
 youtube-dl
 ├── hooks

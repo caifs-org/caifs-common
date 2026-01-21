@@ -1,5 +1,7 @@
 # ripgrep
 
+A faster, enhanced version of grep. Often integrated into editors
+
 ```text
 ripgrep
 ├── hooks

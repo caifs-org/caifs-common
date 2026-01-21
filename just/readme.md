@@ -1,5 +1,7 @@
 # just
 
+A command runner, inspired by make but much better
+
 ```text
 just
 ├── hooks

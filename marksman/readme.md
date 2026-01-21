@@ -1,5 +1,7 @@
 # marksman
 
+LSP server for Markdown
+
 ```text
 marksman
 ├── hooks

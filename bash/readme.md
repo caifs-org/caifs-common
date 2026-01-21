@@ -1,5 +1,7 @@
 # bash
 
+Some nice, minimal configuration for bash shells
+
 ```text
 bash
 ├── config

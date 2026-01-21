@@ -1,5 +1,7 @@
 # docker
 
+Docker community edition engine & CLI tooling
+
 ```text
 docker
 ├── hooks

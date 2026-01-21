@@ -1,5 +1,7 @@
 # glab
 
+GitLab CLI tool for interacting with GitLab APIs
+
 ```text
 glab
 ├── hooks

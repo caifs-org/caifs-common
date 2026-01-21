@@ -1,5 +1,7 @@
 # dive
 
+TUI tool for inspecting docker images
+
 ```text
 dive
 ├── hooks

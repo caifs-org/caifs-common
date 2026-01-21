@@ -1,5 +1,7 @@
 # docker-cli
 
+Docker CE CLI tooling only, no engine install
+
 ```text
 docker-cli
 ├── hooks

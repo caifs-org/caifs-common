@@ -1,5 +1,7 @@
 # oras
 
+CLI tool for interfacing with OCI objects
+
 ```text
 oras
 ├── hooks

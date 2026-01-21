@@ -1,5 +1,7 @@
 # starship
 
+A terminal prompt prettier, written in Rust
+
 ```text
 starship
 ├── config

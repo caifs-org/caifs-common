@@ -1,5 +1,7 @@
 # azure-cli
 
+Official Azure CLI
+
 ```text
 azure-cli
 ├── config

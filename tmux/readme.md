@@ -1,5 +1,7 @@
 # tmux
 
+A terminal multiplexer
+
 ```text
 tmux
 ├── config

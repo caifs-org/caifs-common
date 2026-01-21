@@ -1,5 +1,7 @@
 # terraform
 
+Infrastructure as code tool by HashiCorp
+
 ```text
 terraform
 ├── hooks

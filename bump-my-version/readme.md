@@ -1,5 +1,7 @@
 # bump-my-version
 
+CLI for applying semver practices to git repos
+
 ```text
 bump-my-version
 ├── hooks
