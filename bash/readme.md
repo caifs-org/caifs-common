@@ -15,3 +15,7 @@ bash
 
 6 directories, 5 files
 ```
+
+## Supported target systems
+
+- generic

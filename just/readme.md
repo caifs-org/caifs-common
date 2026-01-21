@@ -9,3 +9,7 @@ just
 
 2 directories, 3 files
 ```
+
+## Supported target systems
+
+- generic

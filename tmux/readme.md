@@ -10,3 +10,9 @@ tmux
 
 3 directories, 3 files
 ```
+
+## Supported target systems
+
+- arch
+- fedora
+- steamos

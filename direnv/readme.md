@@ -13,3 +13,8 @@ direnv
 
 5 directories, 4 files
 ```
+
+## Supported target systems
+
+- arch
+- fedora

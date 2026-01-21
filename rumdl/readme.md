@@ -12,3 +12,7 @@ rumdl
 
 5 directories, 3 files
 ```
+
+## Supported target systems
+
+- generic

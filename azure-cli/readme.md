@@ -17,3 +17,10 @@ azure-cli
 
 8 directories, 5 files
 ```
+
+## Supported target systems
+
+- arch
+- fedora
+- generic
+- steamos

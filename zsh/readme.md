@@ -12,3 +12,10 @@ zsh
 
 4 directories, 4 files
 ```
+
+## Supported target systems
+
+- arch
+- debian
+- fedora
+- ubuntu

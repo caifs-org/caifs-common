@@ -11,3 +11,13 @@ delta
 
 4 directories, 3 files
 ```
+
+## Supported target systems
+
+- arch
+- debian
+- fedora
+- linux
+- macos
+- steamos
+- ubuntu

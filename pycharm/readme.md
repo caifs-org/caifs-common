@@ -17,3 +17,8 @@ pycharm
 
 7 directories, 6 files
 ```
+
+## Supported target systems
+
+- arch
+- linux

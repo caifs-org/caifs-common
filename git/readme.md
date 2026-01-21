@@ -11,3 +11,7 @@ git
 
 3 directories, 4 files
 ```
+
+## Supported target systems
+
+- arch

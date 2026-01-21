@@ -14,3 +14,11 @@ starship
 
 5 directories, 5 files
 ```
+
+## Supported target systems
+
+- arch
+- debian
+- fedora
+- steamos
+- ubuntu

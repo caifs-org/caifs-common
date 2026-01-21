@@ -9,3 +9,8 @@ just-lsp
 
 2 directories, 3 files
 ```
+
+## Supported target systems
+
+- arch
+- linux

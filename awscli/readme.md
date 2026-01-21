@@ -15,3 +15,7 @@ awscli
 
 7 directories, 4 files
 ```
+
+## Supported target systems
+
+- linux

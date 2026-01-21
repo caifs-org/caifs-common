@@ -13,3 +13,8 @@ nvm
 
 5 directories, 4 files
 ```
+
+## Supported target systems
+
+- arch
+- linux
