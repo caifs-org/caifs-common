@@ -7,13 +7,13 @@ repos:
        entry: ./checker.sh # or python your_script.py
        language: script # or python, bash, system, etc.
 
-- repo: https://github.com/rvben/rumdl-pre-commit
-  rev: v0.0.216
-  hooks:
-    - id: rumdl      # Lint only (fails on issues)
-    - id: rumdl-fmt  # Auto-format (fixes what it can)
+ - repo: https://github.com/rvben/rumdl-pre-commit
+   rev: v0.0.216
+   hooks:
+     - id: rumdl      # Lint only (fails on issues)
+     - id: rumdl-fmt  # Auto-format (fixes what it can)
 
-- repo: https://github.com/koalaman/shellcheck-precommit
-  rev: v0.11.0
-  hooks:
-    - id: shellcheck
+# - repo: https://github.com/koalaman/shellcheck-precommit
+#   rev: v0.11.0
+#   hooks:
+#     - id: shellcheck

@@ -1,10 +1,11 @@
 # CAIFS Common Collection
 
-A collection of CAIFS enabled installers and general purpose configuration that can be enabled via CAIFS <https://github.com/caifs-org/caifs>
+A collection of CAIFS enabled installers and general purpose configuration that can be enabled via CAIFS
+<https://github.com/caifs-org/caifs>
 
 ## Installation
 
-See the readme for instructions on how to install the CAIFS installer at https://github.com/caifs-org/caifs
+See the readme for instructions on how to install the CAIFS installer at <https://github.com/caifs-org/caifs>
 
 To enable this repository, pick one of the following
 
@@ -34,10 +35,10 @@ caifs add fzf
 
 ## ~/.localsettings
 
-There is nothing stopping you from using multiple `tuckr` profiles and running things like
-`caifs add  my-emacs-config` alongside this dotfiles repo. However, for those small configuration choices where
-another full-blown dotfile repo (or CAIFS collection) isn't required, then you can use the `~/.localsettings` to provide whatever variable
-customisations you require.
+There is nothing stopping you from using multiple `tuckr` profiles and running things like `caifs add  my-emacs-config`
+alongside this dotfiles repo. However, for those small configuration choices where another full-blown dotfile repo (or
+CAIFS collection) isn't required, then you can use the `~/.localsettings` to provide whatever variable customisations
+you require.
 
 Currently it holds the `DEFAULT_CODE_DIR` and `git` usernames and emails for work/private configurations.
 
@@ -225,7 +226,7 @@ for personal and gitlab.com for work related.
 The git hook also downloads and consolidates common `.gitignore` rules into `$HOME/.config/git/ignore`
 
 The list comes from <https://github.com/github/gitignore> and the currently consolidated ones can be added to within the
-[Hooks/git/post.sh](Hooks/git/post.sh) hook script
+[git/hooks/post.sh](git/hooks/post.sh) hook script
 
 > [!NOTE]
 > The global ignore can always be tailored to suit a per-project `.gitignore` by negating a rule
@@ -321,4 +322,3 @@ RUN curl -sL https://raw.githubusercontent.com/caifs-org/caifs/install.sh | sh &
     caifs add uv pre-commit ruff
 
 ```
-

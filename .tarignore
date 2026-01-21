@@ -1,0 +1,11 @@
+.git
+.github
+.bumpversion
+.gitignore
+.pre-commit-config.yaml
+.rumdl.toml
+.tarignore
+.shellcheckrc
+Justfile
+README.md
+checker.sh
