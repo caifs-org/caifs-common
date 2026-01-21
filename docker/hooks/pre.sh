@@ -2,7 +2,7 @@
 
 
 arch() {
-    yay_install docker docker-buildx docker-compose
+    yay_install docker docker-buildx docker-compose docker-model-bin
     rootdo systemctl enable --now docker
     rootdo usermod -a -G docker,wheel $USER
 }

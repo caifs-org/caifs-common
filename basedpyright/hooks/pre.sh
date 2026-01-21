@@ -1,8 +1,5 @@
 #!/bin/sh
 
-
-generic_install() {
+generic() {
     uv_install basedpyright
 }
-
-install_for_os

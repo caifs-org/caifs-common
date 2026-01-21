@@ -1,5 +1,7 @@
 #!/bin/sh
-
+arch() {
+    yay_install fzf
+}
 
 linux() {
     LATEST_VERSION=$(github_latest_tag "junegunn/fzf")
