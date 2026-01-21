@@ -1,6 +1,10 @@
 #!/bin/sh
 
 
+arch() {
+    yay_install oras
+}
+
 linux() {
 
     LATEST_VERSION="$(github_latest_tag 'oras-project/oras')"

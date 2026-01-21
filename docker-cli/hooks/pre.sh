@@ -1,6 +1,10 @@
 #!/bin/sh
 
 
+arch() {
+    yay_install docker docker-buildx docker-compose
+}
+
 debian() {
     # Add Docker's official GPG key:
     rootdo install -m 0755 -d /etc/apt/keyrings && \

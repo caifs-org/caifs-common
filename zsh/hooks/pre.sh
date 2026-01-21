@@ -1,6 +1,14 @@
 #!/bin/sh
 
 
+arch() {
+    yay_install zsh
+
+    # Support .zshrc.d/ organisation
+    add_line_to_file "source ~/.zshrc-custom" ~/.zshrc
+    mkdir -p ~/.zshrc.d/ || true
+}
+
 fedora() {
     rootdo dnf install -y zsh
 

@@ -1,5 +1,8 @@
 #!/bin/sh
 
+arch(){
+    yay_install git
+}
 
 echo "Gathering some information that will be used for git work or private  configurations"
 printf "%-50s\n" "Is this a [work] or [private] configuration? [default private]"

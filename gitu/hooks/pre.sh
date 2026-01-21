@@ -1,5 +1,8 @@
 #!/bin/sh
 
+arch(
+    yay_install gitu
+)
 
 linux() {
     LATEST_VERSION=$(github_latest_tag "altsem/gitu")

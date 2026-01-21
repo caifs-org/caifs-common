@@ -1,6 +1,12 @@
 #!/bin/sh
 
 
+arch() {
+    yay_install docker docker-buildx docker-compose docker-model-bin
+    rootdo systemctl enable --now docker
+    rootdo usermod -a -G docker,wheel $USER
+}
+
 fedora() {
     rootdo dnf config-manager addrepo --from-repofile https://download.docker.com/linux/$OS_ID/docker-ce.repo
     rootdo dnf update

@@ -1,6 +1,9 @@
 #!/bin/sh
 
 
+arch() {
+    yay_install shellcheck
+}
 
 linux() {
     LATEST_VERSION=$(github_latest_tag "koalaman/shellcheck")

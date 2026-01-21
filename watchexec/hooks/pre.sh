@@ -1,6 +1,9 @@
 #!/bin/sh
 
 
+arch() {
+    yay_install watchexec
+}
 
 fedora() {
     has "curl"
