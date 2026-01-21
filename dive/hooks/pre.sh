@@ -1,6 +1,10 @@
 #!/bin/sh
 
 
+arch() {
+    yay_install dive
+}
+
 fedora() {
     LATEST_VERSION=$(github_latest_tag "wagoodman/dive")
     VERSION=${DIVE_VERSION:=$LATEST_VERSION}

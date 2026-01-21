@@ -1,6 +1,10 @@
 #!/bin/sh
 
 
+arch() {
+    yay_install fd
+}
+
 fedora() {
     rootdo dnf install -y fd-find
 }

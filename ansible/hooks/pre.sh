@@ -1,6 +1,10 @@
 #!/bin/sh
 
 
+arch() {
+    yay_install sshpass
+}
+
 fedora() {
     rootdo dnf install -y sshpass
 }
