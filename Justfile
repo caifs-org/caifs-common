@@ -29,9 +29,12 @@ list-release-tar-files:
     tar -ztf release.tar.gz
 
 # Install pre-commit hooks
+[script]
 pre-commit-install:
+    export PATH="$HOME/.local/bin:$PATH"
     pre-commit install --install-hooks
 
 # Run pre-commit checks on all files
 pre-commit-run:
+    export PATH="$HOME/.local/bin:$PATH"
     pre-commit run --all
