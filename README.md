@@ -40,7 +40,7 @@ alongside this dotfiles repo. However, for those small configuration choices whe
 CAIFS collection) isn't required, then you can use the `~/.localsettings` to provide whatever variable customisations
 you require.
 
-Currently it holds the `DEFAULT_CODE_DIR` and `git` usernames and emails for work/private configurations.
+Currently it holds the `DEFAULT_CODE_DIR`
 
 ## Shell directories
 
@@ -79,7 +79,7 @@ git clone-private https://github.com/caifs-org/caifs-common.git
 
 ```
 
-Will result in the `dotfiles` repo being located at `~/code/private/github.com/vasdee/dotfiles`
+Will result in the `dotfiles` repo being located at `~/code/private/github.com/caifs-org/caifs-common`
 
 Is it a bit java and dotnetty namespace looking? Kinda. Does it make things easier when you are dealing with a lot of
 enterprise level repositories scattered all over the place? Absolutely!
@@ -88,8 +88,7 @@ To make it even easier to navigate, if you are using `bash` or `zsh` via this re
 navigator via the alias, `gitchooser`
 
 > [!NOTE]
-> The git target prompts during the run of `caifs add git` for the variables to populate localsettings
-> You can always manually edit this file
+> The git target will generate too empty ~/.gitconfig-work and ~/.gitconfig-private files to populate after install
 
 ## Passwords
 
@@ -328,7 +327,7 @@ Run these after first boot of emacs `M-x all-the-icons-install <RETURN>` and `M-
 FROM debian:trixie as build
 
 RUN curl -sL https://raw.githubusercontent.com/caifs-org/caifs/install.sh | sh && \
-    CAIFS_COLLECTIONS=$PWD/caifs-common curl -sL https://github.com/caifs-org/caifs-common/install.sh && \
+    caifs add caifs-common && \
     caifs add uv pre-commit ruff
 
 ```
