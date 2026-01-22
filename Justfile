@@ -8,7 +8,10 @@ help:
 [doc('Install the CAIFS framework')]
 [script]
 install-caifs:
+    export PATH="$HOME/.local/bin:$PATH"
     curl -sL https://raw.githubusercontent.com/caifs-org/caifs/refs/heads/main/install.sh | sh
+    caifs add caifs-common -d . --hooks
+
 
 [doc('Install CI runner dependencies (uv, pre-commit, rumdl)')]
 [script]
