@@ -1,6 +1,8 @@
 set export
 set shell := ["/bin/sh", "-c"]
 
+PATH := x"$HOME/.local/bin:$PATH"
+
 [doc('List available recipes')]
 help:
     @just --list
@@ -8,16 +10,12 @@ help:
 [doc('Install the CAIFS framework')]
 [script]
 install-caifs:
-    export PATH="$HOME/.local/bin:$PATH"
     curl -sL https://raw.githubusercontent.com/caifs-org/caifs/refs/heads/main/install.sh | sh
-    caifs add caifs-common -d . --hooks
-
 
 [doc('Install CI runner dependencies (uv, pre-commit, rumdl)')]
 [script]
 install-caifs-runner-deps:
-    export PATH="$HOME/.local/bin:$PATH"
-    caifs add uv pre-commit rumdl --hooks
+    caifs add uv pre-commit rumdl -d . --hooks
 
 [doc('Bump version (use --patch, --minor, or --major)')]
 [script]
@@ -40,13 +38,11 @@ list-release-tar-files:
 [doc('Install pre-commit hooks locally')]
 [script]
 pre-commit-install:
-    export PATH="$HOME/.local/bin:$PATH"
     pre-commit install --install-hooks
 
 [doc('Run pre-commit checks on all files')]
 [script]
 pre-commit-run:
-    export PATH="$HOME/.local/bin:$PATH"
     pre-commit run --all
 
 [doc('Generate readme.md for all targets')]
