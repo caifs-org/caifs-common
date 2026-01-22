@@ -29,6 +29,8 @@ jobs:
 
       - name: Add the dependencies to the runner
         run: |
+          mkdir caifs
+          cd caifs
           just install-caifs
           just install-caifs-runner-deps
           just pre-commit-install
