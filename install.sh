@@ -7,5 +7,6 @@ LATEST_VERSION=$(curl -sL https://api.github.com/repos/caifs-org/caifs-common/re
                      | tr -d '[:space:]' \
                      | sed -E 's/.*"tag_name":"v?([^"]+)".*/\1/')
 
+mkdir -p "$LOCAL_CAIFS_COLLECTION_DIR"
 curl -sL https://github.com/caifs-org/caifs-common/releases/download/v"$LATEST_VERSION"/release.tar.gz \
     | tar vzxf - -C "$LOCAL_CAIFS_COLLECTION_DIR"
