@@ -11,11 +11,12 @@ help:
 [script]
 install-caifs:
     curl -sL https://raw.githubusercontent.com/caifs-org/caifs/refs/heads/main/install.sh | sh
+    ls -l $HOME/.local/bin/
 
 [doc('Install CI runner dependencies (uv, pre-commit, rumdl)')]
 [script]
 install-caifs-runner-deps:
-    caifs add uv pre-commit rumdl -d . --hooks
+    caifs add uv pre-commit rumdl --hooks
 
 [doc('Bump version (use --patch, --minor, or --major)')]
 [script]
