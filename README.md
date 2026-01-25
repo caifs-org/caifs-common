@@ -234,7 +234,7 @@ for personal and gitlab.com for work related.
 The git hook also downloads and consolidates common `.gitignore` rules into `$HOME/.config/git/ignore`
 
 The list comes from <https://github.com/github/gitignore> and the currently consolidated ones can be added to within the
-[git/hooks/post.sh](git/hooks/post.sh) hook script
+[git-dev/hooks/post.sh](git-dev/hooks/post.sh) hook script
 
 > [!NOTE]
 > The global ignore can always be tailored to suit a per-project `.gitignore` by negating a rule
