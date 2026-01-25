@@ -13,7 +13,7 @@ To enable this repository, pick one of the following
 
 ``` shell
 git clone https://github.com/caifs-org/caifs-common.git
-export "CAIFS_COLLECTIONS=$CAIFS_COLLECTIONS:$PWD/caifs-common"
+ln -s $PWD/caifs-common $HOME/.local/share/caifs-collections/caifs-common
 
 # install a target from this collection
 # eg caifs add <target from this collection> 
@@ -23,8 +23,7 @@ caifs add fzf
 ### Static Release method
 
 ``` shell
-curl -sL https://github.com/caifs-org/caifs-common
-export "CAIFS_COLLECTIONS=$CAIFS_COLLECTIONS:$PWD/caifs-common"
+curl -sL https://raw.githubusercontent.com/caifs-org/caifs-common/refs/heads/main/install.sh | sh
 
 # install a target from this collection
 # eg caifs add <target from this collection> 
