@@ -113,6 +113,7 @@ way I like to keep the contents of that file within a dedicated password manager
 | [dive](dive/)                                       | TUI tool for inspecting docker images                                               |
 | [docker](docker/)                                   | Docker community edition engine & CLI tooling                                       |
 | [docker-cli](docker-cli/)                           | Docker CE CLI tooling only, no engine install                                       |
+| [docker-language-server](docker-language-server/)   | Docker language server for auto-completion in IDEs                                  |
 | [editorconfig](editorconfig/)                       | Default editor configurations for maintaining consistency between teams             |
 | [fd](fd/)                                           | Fast find alternative written in Rust                                               |
 | [fzf](fzf/)                                         | Fast fuzzy finder utility                                                           |
