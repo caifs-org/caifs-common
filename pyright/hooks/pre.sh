@@ -1,6 +1,5 @@
 #!/bin/sh
 
-
 generic() {
-    uv_install pyright
+    uv_install pyright[nodejs]
 }
