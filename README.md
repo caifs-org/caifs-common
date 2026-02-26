@@ -108,6 +108,7 @@ way I like to keep the contents of that file within a dedicated password manager
 | [bump-my-version](bump-my-version/)                 | CLI for applying semver practices to git repos                                      |
 | [bun](bun/)                                         | Fast JavaScript runtime and package manager                                         |
 | [cruft](cruft/)                                     | CookieCutter template manager                                                       |
+| [d2](d2/)                                           | Modern diagram scripting language that turns text into diagrams                      |
 | [delta](delta/)                                     | Syntax-highlighting pager for git diffs                                             |
 | [direnv](direnv/)                                   | Manage environment variables per directory                                          |
 | [dive](dive/)                                       | TUI tool for inspecting docker images                                               |
