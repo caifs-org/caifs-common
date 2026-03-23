@@ -1,0 +1,16 @@
+.*
+.git/
+.github/
+.rumdl_cache/
+.bumpversion.toml
+.gitignore
+.pre-commit-config.yaml
+.rumdl.toml
+.shellcheckrc
+.tarignore
+Justfile
+README.md
+checker.sh
+install.sh
+.dockerignore
+Dockerfile

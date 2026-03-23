@@ -30,6 +30,16 @@ curl -sL https://raw.githubusercontent.com/caifs-org/caifs-common/refs/heads/mai
 caifs add fzf
 ```
 
+### Docker container build method
+
+``` dockerfile
+FROM debian:trixie-slim
+COPY --from=ghcr.io/caifs-org/caifs:latest /caifs/ /usr/local/
+COPY --from=ghcr.io/caifs-org/caifs-common:latest /caifs-common/ /usr/local/share/caifs-collections/caifs-common/
+
+RUN CAIFS_LOCAL_COLLECTIONS=/usr/local/share/caifs-collections caifs --status
+```
+
 ## Some opinionated notes
 
 ## ~/.localsettings
