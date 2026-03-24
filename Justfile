@@ -46,6 +46,11 @@ pre-commit-install:
 pre-commit-run:
     pre-commit run --all
 
+[doc('Utility function to do a regex replacement on a string')]
+[script]
+replace str from to:
+    echo {{ replace(str, from, to) }}
+
 [doc('Generate readme.md for all targets')]
 [script]
 generate-target-readmes:
