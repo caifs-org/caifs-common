@@ -42,15 +42,6 @@ RUN CAIFS_LOCAL_COLLECTIONS=/usr/local/share/caifs-collections caifs --status
 
 ## Some opinionated notes
 
-## ~/.localsettings
-
-There is nothing stopping you from using multiple `tuckr` profiles and running things like `caifs add  my-emacs-config`
-alongside this dotfiles repo. However, for those small configuration choices where another full-blown dotfile repo (or
-CAIFS collection) isn't required, then you can use the `~/.localsettings` to provide whatever variable customisations
-you require.
-
-Currently it holds the `DEFAULT_CODE_DIR`
-
 ## Shell directories
 
 Where possible, `config.d` practices are adopted for including separate config files. This is generally a good practice
@@ -63,41 +54,6 @@ includes, which provide minimal impact to your top-most config files.
 > each group that sets a config file in either `~/.bashrc.d/` or `~/.zshrc.d` will use the practice of using the group
 > name of the thing being installed as the config file name.
 > E.g. `caifs add starship` will add a `~/.bashrc.d/starship.bash` config file via symlink
-
-## Git'isms and DEFAULT_CODE_DIR
-
-The git config provided prompts for a `DEFAULT_CODE_DIR` location, which is typically a directory where all your repos
-get cloned to. You do clone all your repos to a single directory right? And not to the desktop and all over the place??
-
-This git config takes it a step further and separates "work" from "private" locations and includes username and email
-credentials based on this structure.
-
-For example, if you take the default `DEFAULT_CODE_DIR=~/code` setting. Then this gitconfig will assume all your 'work'
-repos sit under `~/code/work` and similarly all your private repos are under `~/code/private`.
-
-To take it another step further, the gitconfig supplied offers some nice function aliases to provide further
-organisation.
-
-`git clone-private` and `git clone-work` will clone the supplied repository, with the full path, under the respective
-`~/code/private` and `~/code/work` directories.
-
-For example, running the following on this repo (which is where the installer will put it by default)
-
-```bash
-git clone-private https://github.com/caifs-org/caifs-common.git
-
-```
-
-Will result in the `dotfiles` repo being located at `~/code/private/github.com/caifs-org/caifs-common`
-
-Is it a bit java and dotnetty namespace looking? Kinda. Does it make things easier when you are dealing with a lot of
-enterprise level repositories scattered all over the place? Absolutely!
-
-To make it even easier to navigate, if you are using `bash` or `zsh` via this repo, you will get a nice interactive
-navigator via the alias, `gitchooser`
-
-> [!NOTE]
-> The git target will generate too empty ~/.gitconfig-work and ~/.gitconfig-private files to populate after install
 
 ## Passwords
 
@@ -113,7 +69,6 @@ way I like to keep the contents of that file within a dedicated password manager
 | [awscli](awscli/)                                   | Official AWS CLI                                                                    |
 | [azure-cli](azure-cli/)                             | Official Azure CLI                                                                  |
 | [basedpyright](basedpyright/)                       | A based version of the pyright lang server with saner defaults                      |
-| [bash](bash/)                                       | Some nice, minimal configuration for bash shells                                    |
 | [bash-language-server](bash-language-server/)       | LSP server for bash and sh                                                          |
 | [bump-my-version](bump-my-version/)                 | CLI for applying semver practices to git repos                                      |
 | [bun](bun/)                                         | Fast JavaScript runtime and package manager                                         |
@@ -125,7 +80,6 @@ way I like to keep the contents of that file within a dedicated password manager
 | [docker](docker/)                                   | Docker community edition engine & CLI tooling                                       |
 | [docker-cli](docker-cli/)                           | Docker CE CLI tooling only, no engine install                                       |
 | [docker-language-server](docker-language-server/)   | Docker language server for auto-completion in IDEs                                  |
-| [editorconfig](editorconfig/)                       | Default editor configurations for maintaining consistency between teams             |
 | [fd](fd/)                                           | Fast find alternative written in Rust                                               |
 | [fzf](fzf/)                                         | Fast fuzzy finder utility                                                           |
 | [git](git/)                                         | Some nice configuration specifically for work                                       |
@@ -159,7 +113,6 @@ way I like to keep the contents of that file within a dedicated password manager
 | [watchexec](watchexec/)                             | Monitor file changes and run commands                                               |
 | [yaml-language-server](yaml-language-server/)       | YAML language server, for auto-completion                                           |
 | [youtube-dl](youtube-dl/)                           | YouTube video downloader (yt-dlp)                                                   |
-| [zsh](zsh/)                                         | Some nice, minimal configuration for zsh shells                                     |
 
 > [!TIP]
 > All can be installed and configured via `caifs add <name of target>`
@@ -211,18 +164,7 @@ This is considered best practice for non system wide installs and hence is the p
 > Once tools are installed this way, be sure to periodically update them via_ `uv tool update`
 > or by running the _set_ hook again for that group.
 
-### editorConfig
-
-A root level editorConfig is supplied and will be installed in `$DEFAULT_CODE_DIR`
-
-> [!IMPORTANT]
-> In order for this root revel editorConfig to take effect, any custom editorConfigs within your
-> repo ( or other locations ) should set `root = false` in order for these defaults to be discovered.
-> The most simplest form of this is to add a blank `.editorconfig` into your repo
-
 ### Shells BASH and ZSH
-
-Both can be installed and basically configured via their respective groups `bash` and `zsh`
 
 Other tools that require bash or zsh integration manage their own configuration for the shells, for instance
 `starship`. In order to keep this consistent, the generally well accepted practice of organsing your custom
@@ -233,26 +175,6 @@ For bash, custom scripts should be placed in `~/.bashrc.d/` while for zsh, it is
 Some distributions already adopt this practice, in which case nothing else needs to be done. For those that don't,
 the addition is contained with a `.bashrc-custom` or `.zshrc-custom` file and the source line is automatically appended
 to `.bashrc` or `.zshrc`.
-
-### Git config
-
-On the off chance you want to work with work and personal accounts on the same machine, provisions have been made to
-cater for both configs.
-
-This repository assumes that you will use the `git clone-work` or `git clone-private` alias to clone ALL repositories,
-both personal and work related. This will make organising mostly straight forward as _most_ people will use github.com
-for personal and gitlab.com for work related.
-
-### Global gitignore
-
-The git hook also downloads and consolidates common `.gitignore` rules into `$HOME/.config/git/ignore`
-
-The list comes from <https://github.com/github/gitignore> and the currently consolidated ones can be added to within the
-[git-dev/hooks/post.sh](git-dev/hooks/post.sh) hook script
-
-> [!NOTE]
-> The global ignore can always be tailored to suit a per-project `.gitignore` by negating a rule
-> using the ! operator
 
 ### Pandoc
 
@@ -329,10 +251,6 @@ it might not be as useful.
 
 A potential pattern for using `rumdl` within `pre-commit` checks in a pipeline for instance, is to install the `rumdl`
 config during the pipeline
-
-### Emacs
-
-Run these after first boot of emacs `M-x all-the-icons-install <RETURN>` and `M-x nerd-icons-install <RETURN>`
 
 ## Usage within docker builds
 

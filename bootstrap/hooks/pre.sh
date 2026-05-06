@@ -33,15 +33,3 @@ arch() {
         yay -S yay
     fi
 }
-
-generic () {
-
-    # Generate a ~/.localsettings file and DEFAULT_CODE_DIR variable
-    if [ ! -f ~/.localsettings ] && [ -z "$DEFAULT_CODE_DIR" ] ; then
-        echo "Base directory for git clones? [default ~/code/]"
-        read -r default_dir
-        default_dir=${default_dir:-~/code}
-        echo "DEFAULT_CODE_DIR=$default_dir" > ~/.localsettings
-    fi
-
-}
