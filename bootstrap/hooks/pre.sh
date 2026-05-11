@@ -9,7 +9,8 @@ fedora() {
 }
 
 debian() {
-    rootdo apt install -y curl
+    rootdo apt-get update
+    rootdo apt-get install -y curl
 }
 
 steamos() {

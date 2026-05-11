@@ -112,7 +112,6 @@ way I like to keep the contents of that file within a dedicated password manager
 | [uv](uv/)                                           | Python dependency management                                                        |
 | [watchexec](watchexec/)                             | Monitor file changes and run commands                                               |
 | [yaml-language-server](yaml-language-server/)       | YAML language server, for auto-completion                                           |
-| [youtube-dl](youtube-dl/)                           | YouTube video downloader (yt-dlp)                                                   |
 
 > [!TIP]
 > All can be installed and configured via `caifs add <name of target>`
