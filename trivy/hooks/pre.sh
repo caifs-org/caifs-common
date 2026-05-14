@@ -14,10 +14,10 @@ linux() {
     VERSION=${TRIVY_VERSION:=$LATEST_VERSION}
     FILENAME="trivy_${VERSION}_Linux-64bit.tar.gz"
     curl -sL "https://github.com/aquasecurity/trivy/releases/download/v${VERSION}/${FILENAME}" | tar -xz
-    mkdir -p local/bin local/share/trivy/templates/
 
-    install -m "0755" ./trivy local/bin/
-    install contrib/*.tpl local/share/trivy/templates/
+    install -m "0755" ./trivy "${CAIFS_INSTALL_DIR}"/bin/
+    install -d "${CAIFS_INSTALL_DIR}"/share/trivy/templates/
+    install contrib/*.tpl "${CAIFS_INSTALL_DIR}"/share/trivy/templates/
 
-    caifs_install "local/*"
+    caifs_install
 }

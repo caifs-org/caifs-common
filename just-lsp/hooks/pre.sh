@@ -11,7 +11,7 @@ linux() {
     FILENAME=just-lsp-${VERSION}-x86_64-unknown-linux-gnu.tar.gz
     curl -sLO https://github.com/terror/just-lsp/releases/download/${VERSION}/${FILENAME}
     tar -xzf ${FILENAME}
-    mv just-lsp bin/
-    chmod +x bin/just-lsp
-    caifs_install bin
+    mv just-lsp "${CAIFS_INSTALL_DIR}"/bin/
+    chmod +x "${CAIFS_INSTALL_DIR}"/bin/just-lsp
+    caifs_install
 }

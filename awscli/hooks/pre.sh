@@ -7,24 +7,19 @@ linux() {
     # and at system level
     curl -s "https://awscli.amazonaws.com/awscli-exe-linux-$(uname -m).zip" -o "awscliv2.zip"
     unzip awscliv2.zip
-    ./aws/install --bin-dir local/bin --install-dir local/awscli --update
+    ./aws/install --bin-dir tmp/bin --install-dir tmp/awscli --update
 
-    current_link=$(readlink local/awscli/v2/current)
+    current_link=$(readlink tmp/awscli/v2/current)
     version=$(basename "$current_link")
     echo "Current version is: $version"
 
-    unlink local/bin/aws
-    unlink local/bin/aws_completer
-    unlink local/awscli/v2/current
+    mv tmp/awscli/v2/"$version" "${CAIFS_INSTALL_DIR}"/lib/awscli
 
-    mkdir -p local/lib/
-    mv local/awscli/v2/"$version" local/lib/awscli
-
-    cd local/bin
+    cd "${CAIFS_INSTALL_DIR}"/bin
     ln -s ../lib/awscli/bin/aws aws
     ln -s ../lib/awscli/bin/aws_completer aws_completer
 
     cd ../..
 
-    caifs_install "local/*"
+    caifs_install
 }

@@ -9,10 +9,9 @@ linux() {
     chmod 0755 mqttui
     chmod 0755 completions/mqttui.bash
 
-    mkdir -p bin share/bash-completion/completions
-    mv mqttui bin/
-    mv completions/mqttui.bash share/bash-completion/completions/
+    mkdir -p bin "${CAIFS_INSTALL_DIR}"/share/bash-completion/completions
+    mv mqttui "${CAIFS_INSTALL_DIR}"/bin/
+    mv completions/mqttui.bash "${CAIFS_INSTALL_DIR}"/share/bash-completion/completions/
 
-    caifs_install bin
-    caifs_install share
+    caifs_install
 }

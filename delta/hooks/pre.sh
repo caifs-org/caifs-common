@@ -2,15 +2,15 @@
 
 
 arch() {
-    rootdo pacman -S --noconfirm git-delta
+    yay_install git-delta
 }
 
-fedora() {
-    rootdo dnf install -y git-delta
-}
+#fedora() {
+#    rootdo dnf install -y git-delta
+#}
 
 debian() {
-    rootdo apt install -y git-delta
+    rootdo apt-get install -y git-delta
 }
 
 ubuntu() {
@@ -29,9 +29,10 @@ linux() {
     # Fallback for Linux distros without package manager support
     LATEST_VERSION=$(github_latest_tag "dandavison/delta")
     VERSION=${DELTA_VERSION:=$LATEST_VERSION}
-    FILENAME="delta-${VERSION}-$(uname -m)-unknown-linux-gnu.tar.gz"
-    curl -fOL "https://github.com/dandavison/delta/releases/download/${VERSION}/${FILENAME}"
-    tar -xzf ${FILENAME}
-    mv delta-${VERSION}-$(uname -m)-unknown-linux-gnu/delta ~/.local/bin/
-    chmod +x ~/.local/bin/delta
+    FILENAME="delta-${VERSION}-$(uname -m)-unknown-linux-gnu"
+    curl -fOL "https://github.com/dandavison/delta/releases/download/${VERSION}/${FILENAME}.tar.gz"
+    tar -vxzf "${FILENAME}.tar.gz"
+    mv "${FILENAME}"/delta "${CAIFS_INSTALL_DIR}"/bin/
+    chmod +x "${CAIFS_INSTALL_DIR}"/bin/delta
+    caifs_install
 }

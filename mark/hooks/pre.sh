@@ -14,9 +14,10 @@ linux() {
     esac
 
     FILENAME="mark_Linux_${ARCH}.tar.gz"
-    curl -fOL "https://github.com/kovetskiy/mark/releases/download/${VERSION}/${FILENAME}"
-    tar -xzf "${FILENAME}"
-    install -m "0755" mark ~/.local/bin/
+    curl -sfOL "https://github.com/kovetskiy/mark/releases/download/v${VERSION}/${FILENAME}"
+    tar -xzf "${FILENAME}" -C "${CAIFS_INSTALL_DIR}"/bin
+    chmod +x "${CAIFS_INSTALL_DIR}"/bin/mark
+    caifs_install
 }
 
 darwin() {
@@ -30,7 +31,8 @@ darwin() {
     esac
 
     FILENAME="mark_Darwin_${ARCH}.tar.gz"
-    curl -fOL "https://github.com/kovetskiy/mark/releases/download/${VERSION}/${FILENAME}"
-    tar -xzf "${FILENAME}"
-    install -m "0755" mark ~/.local/bin/
+    curl -sfOL "https://github.com/kovetskiy/mark/releases/download/v${VERSION}/${FILENAME}"
+    tar -xzf "${FILENAME}" -C "${CAIFS_INSTALL_DIR}"/bin
+    chmod +x "${CAIFS_INSTALL_DIR}"/bin/mark
+    caifs_install
 }
