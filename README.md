@@ -107,7 +107,6 @@ way I like to keep the contents of that file within a dedicated password manager
 | [terraform](terraform/)                             | Infrastructure as code tool by HashiCorp                                            |
 | [tmux](tmux/)                                       | A terminal multiplexer                                                              |
 | [trivy](trivy/)                                     | Container image scanning tool                                                       |
-| [tuckr](tuckr/)                                     | Dotfile symlink manager                                                             |
 | [ty](ty/)                                           | An extremely fast python type checker and language server from Astral               |
 | [uv](uv/)                                           | Python dependency management                                                        |
 | [watchexec](watchexec/)                             | Monitor file changes and run commands                                               |
