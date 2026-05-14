@@ -13,5 +13,7 @@ linux() {
     curl -fLO "https://github.com/oras-project/oras/releases/download/v${VERSION}/${FILENAME}.tar.gz"
     mkdir -p oras-install/
     tar -zxf ${FILENAME}.tar.gz -C oras-install/
-    mv oras-install/oras ~/.local/bin/
+    mv oras-install/oras "${CAIFS_INSTALL_DIR}"/bin/
+
+    caifs_install
 }

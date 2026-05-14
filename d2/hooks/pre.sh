@@ -21,9 +21,11 @@ linux() {
     FILENAME="d2-v${VERSION}-linux-${ARCH}.tar.gz"
     curl -fOL "https://github.com/terrastruct/d2/releases/download/v${VERSION}/${FILENAME}"
     tar -xzf "${FILENAME}"
-    install -m "0755" "d2-v${VERSION}/bin/d2" ~/.local/bin/
+    install -m "0755" "d2-v${VERSION}/bin/d2" "${CAIFS_INSTALL_DIR}"/bin/
     install -d ~/.local/share/man/man1/
-    install -m "0644" "d2-v${VERSION}/man/d2.1" ~/.local/share/man/man1/
+    install -m "0644" "d2-v${VERSION}/man/d2.1" "${CAIFS_INSTALL_DIR}"/share/man/man1/
+
+    caifs_install
 }
 
 darwin() {
@@ -39,5 +41,5 @@ darwin() {
     FILENAME="d2-v${VERSION}-macos-${ARCH}.tar.gz"
     curl -fOL "https://github.com/terrastruct/d2/releases/download/v${VERSION}/${FILENAME}"
     tar -xzf "${FILENAME}"
-    install -m "0755" "d2-v${VERSION}/bin/d2" ~/.local/bin/
+    install -m "0755" "d2-v${VERSION}/bin/d2" "${CAIFS_INSTALL_DIR}"/bin/
 }
