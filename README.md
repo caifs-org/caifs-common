@@ -3,6 +3,9 @@
 A collection of CAIFS enabled installers and general purpose configuration that can be enabled via CAIFS
 <https://github.com/caifs-org/caifs>
 
+This common library also acts as an awesome-lite list of good development software, with the benefit of being able to
+see how the specific software can be installed, in a succinct way rather than trawling through various docs.
+
 ## Installation
 
 See the readme for instructions on how to install the CAIFS installer at <https://github.com/caifs-org/caifs>
