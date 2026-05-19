@@ -73,7 +73,7 @@ way I like to keep the contents of that file within a dedicated password manager
 | [bump-my-version](bump-my-version/)                 | CLI for applying semver practices to git repos                                      |
 | [bun](bun/)                                         | Fast JavaScript runtime and package manager                                         |
 | [cruft](cruft/)                                     | CookieCutter template manager                                                       |
-| [d2](d2/)                                           | Modern diagram scripting language that turns text into diagrams                      |
+| [d2](d2/)                                           | Modern diagram scripting language that turns text into diagrams                     |
 | [delta](delta/)                                     | Syntax-highlighting pager for git diffs                                             |
 | [direnv](direnv/)                                   | Manage environment variables per directory                                          |
 | [dive](dive/)                                       | TUI tool for inspecting docker images                                               |
@@ -96,6 +96,7 @@ way I like to keep the contents of that file within a dedicated password manager
 | [poetry](poetry/)                                   | A perfectly fine python project management tool, but deprecated in favour of uv now |
 | [pre-commit](pre-commit/)                           | Run checks and validation before committing to git                                  |
 | [pycharm](pycharm/)                                 | JetBrains Python IDE                                                                |
+| [pyrefly](pyrefly/)                                 | A fast type checker and language server for Python with powerful IDE features       |
 | [pyright](pyright/)                                 | Microsoft Python language server                                                    |
 | [ripgrep](ripgrep/)                                 | A faster, enhanced version of grep. Often integrated into editors                   |
 | [ruff](ruff/)                                       | Extremely fast linter for Python                                                    |
