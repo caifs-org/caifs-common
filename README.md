@@ -45,7 +45,7 @@ RUN CAIFS_LOCAL_COLLECTIONS=/usr/local/share/caifs-collections caifs --status
 
 ## Some opinionated notes
 
-## Shell directories
+### Shell directories
 
 Where possible, `config.d` practices are adopted for including separate config files. This is generally a good practice
 everywhere, as it allows your most "top-most" config file, say `~/.bashrc`, `~/.zshrc` or `~/.ssh/config` to not be
@@ -53,12 +53,15 @@ manipulated by this library. Often a default is provided by your distro of choic
 dot file. Either way, this library will avoid touching these files when possible and support the use of `config.d` style
 includes, which provide minimal impact to your top-most config files.
 
+CAIFS along with this common collection generally uses the completion directories of `share/zsh/completions`
+and `share/bash-completion/completions`.
+
 > [!TIP]
 > each group that sets a config file in either `~/.bashrc.d/` or `~/.zshrc.d` will use the practice of using the group
 > name of the thing being installed as the config file name.
 > E.g. `caifs add starship` will add a `~/.bashrc.d/starship.bash` config file via symlink
 
-## Passwords
+### Passwords
 
 I like using a `~/.netrc` file as my single source of truth for credential management. Others might not, but either
 way I like to keep the contents of that file within a dedicated password manager
@@ -150,7 +153,7 @@ then the docker-cli target is an alternative.
 
 ### Install uv
 
-Installing uv is a requirement for other tools, such as pre-commit, ruff, poetry and just.
+Installing uv is a requirement for other tools, such as `pre-commit`, `ruff`, `poetry` and `just`.
 
 The install occurs via the currently recommended way on <https://docs.astral.sh/uv/getting-started/installation/>
 
@@ -253,14 +256,3 @@ it might not be as useful.
 
 A potential pattern for using `rumdl` within `pre-commit` checks in a pipeline for instance, is to install the `rumdl`
 config during the pipeline
-
-## Usage within docker builds
-
-``` dockerfile
-FROM debian:trixie as build
-
-RUN curl -sL https://raw.githubusercontent.com/caifs-org/caifs/install.sh | sh && \
-    caifs add caifs-common && \
-    caifs add uv pre-commit ruff
-
-```
