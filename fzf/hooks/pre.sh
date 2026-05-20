@@ -10,5 +10,4 @@ linux() {
     curl -sOL https://github.com/junegunn/fzf/releases/download/v${VERSION}/${FILENAME}
     tar xzf ${FILENAME}
     mv ./fzf "${CAIFS_INSTALL_DIR}"/bin/fzf
-    caifs_install
 }

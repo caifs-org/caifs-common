@@ -13,5 +13,4 @@ linux() {
     tar -xzf ${FILENAME}
     mv just-lsp "${CAIFS_INSTALL_DIR}"/bin/
     chmod +x "${CAIFS_INSTALL_DIR}"/bin/just-lsp
-    caifs_install
 }

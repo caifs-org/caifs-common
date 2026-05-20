@@ -14,6 +14,4 @@ linux() {
     mkdir -p oras-install/
     tar -zxf ${FILENAME}.tar.gz -C oras-install/
     mv oras-install/oras "${CAIFS_INSTALL_DIR}"/bin/
-
-    caifs_install
 }

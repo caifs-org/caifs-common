@@ -7,6 +7,4 @@ linux () {
          --create-dirs \
          --create-file-mode 0755 \
          https://github.com/docker/docker-language-server/releases/download/v"${VERSION}"/"${FILENAME}"
-
-    caifs_install
 }

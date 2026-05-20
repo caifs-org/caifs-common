@@ -13,5 +13,4 @@ linux() {
     tar zxf $FILENAME
     mv shellcheck-v${VERSION}/shellcheck "${CAIFS_INSTALL_DIR}"/bin/shellcheck
     chmod +x "${CAIFS_INSTALL_DIR}"/bin/shellcheck
-    caifs_install
 }

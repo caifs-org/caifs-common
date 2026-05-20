@@ -11,5 +11,4 @@ linux() {
     curl -Ls https://gitlab.com/gitlab-org/cli/-/releases/v${VERSION}/downloads/${FILENAME}.tar.gz | tar xvzf -
     mv bin/glab "${CAIFS_INSTALL_DIR}"/bin/
     chmod +x "${CAIFS_INSTALL_DIR}"/bin/glab
-    caifs_install
 }

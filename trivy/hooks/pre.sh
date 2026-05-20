@@ -18,6 +18,4 @@ linux() {
     install -m "0755" ./trivy "${CAIFS_INSTALL_DIR}"/bin/
     install -d "${CAIFS_INSTALL_DIR}"/share/trivy/templates/
     install contrib/*.tpl "${CAIFS_INSTALL_DIR}"/share/trivy/templates/
-
-    caifs_install
 }
