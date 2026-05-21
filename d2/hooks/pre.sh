@@ -24,6 +24,8 @@ linux() {
     install -m "0755" "d2-v${VERSION}/bin/d2" "${CAIFS_INSTALL_DIR}"/bin/
     install -d ~/.local/share/man/man1/
     install -m "0644" "d2-v${VERSION}/man/d2.1" "${CAIFS_INSTALL_DIR}"/share/man/man1/
+
+    caifs_install
 }
 
 darwin() {

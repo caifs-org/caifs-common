@@ -2,5 +2,5 @@
 
 
 linux() {
-    rm -f ~/.local/bin/just-lsp
+    caifs_remove bin/just-lsp
 }

@@ -17,6 +17,7 @@ linux() {
     curl -sfOL "https://github.com/kovetskiy/mark/releases/download/v${VERSION}/${FILENAME}"
     tar -xzf "${FILENAME}" -C "${CAIFS_INSTALL_DIR}"/bin
     chmod +x "${CAIFS_INSTALL_DIR}"/bin/mark
+    caifs_install
 }
 
 darwin() {
@@ -33,4 +34,5 @@ darwin() {
     curl -sfOL "https://github.com/kovetskiy/mark/releases/download/v${VERSION}/${FILENAME}"
     tar -xzf "${FILENAME}" -C "${CAIFS_INSTALL_DIR}"/bin
     chmod +x "${CAIFS_INSTALL_DIR}"/bin/mark
+    caifs_install
 }

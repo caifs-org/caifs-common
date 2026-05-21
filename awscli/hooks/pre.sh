@@ -1,5 +1,7 @@
 #!/bin/sh
 
+
+
 linux() {
     # cli does a lot of absolute symbolic linking, have to replicate this to allow it to be installed locally
     # and at system level
@@ -17,4 +19,7 @@ linux() {
     ln -s ../lib/awscli/bin/aws aws
     ln -s ../lib/awscli/bin/aws_completer aws_completer
 
+    cd ../..
+
+    caifs_install
 }

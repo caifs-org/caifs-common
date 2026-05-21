@@ -12,4 +12,5 @@ linux() {
     unzip -o "${FILENAME}".zip
     mv "${FILENAME}"/gitu "${CAIFS_INSTALL_DIR}"/bin/
     chmod +x "${CAIFS_INSTALL_DIR}"/bin/gitu
+    caifs_install
 }

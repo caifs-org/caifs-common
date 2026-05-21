@@ -12,4 +12,6 @@ generic() {
 
     cd "${CAIFS_INSTALL_DIR}"/bin || exit
     ln -s ../lib/devcontainers/bin/devcontainer devcontainer
+
+    caifs_install
 }

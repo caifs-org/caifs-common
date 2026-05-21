@@ -12,4 +12,6 @@ linux() {
     mkdir -p bin "${CAIFS_INSTALL_DIR}"/share/bash-completion/completions
     mv mqttui "${CAIFS_INSTALL_DIR}"/bin/
     mv completions/mqttui.bash "${CAIFS_INSTALL_DIR}"/share/bash-completion/completions/
+
+    caifs_install
 }

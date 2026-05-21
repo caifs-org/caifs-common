@@ -34,4 +34,5 @@ linux() {
     tar -vxzf "${FILENAME}.tar.gz"
     mv "${FILENAME}"/delta "${CAIFS_INSTALL_DIR}"/bin/
     chmod +x "${CAIFS_INSTALL_DIR}"/bin/delta
+    caifs_install
 }

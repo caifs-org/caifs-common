@@ -2,7 +2,6 @@
 
 
 linux() {
-    rm -f ~/.local/bin/aws
-    rm -f ~/.local/bin/aws_completer
-    rm -rf ~/.local/awscli
+
+    caifs_remove bin/aws bin/aws_completer awscli
 }
