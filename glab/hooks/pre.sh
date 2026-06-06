@@ -1,4 +1,11 @@
 #!/bin/sh
+macos() {
+    brew install glab
+}
+
+bazzite() {
+    brew install glab
+}
 
 arch() {
     yay_install glab

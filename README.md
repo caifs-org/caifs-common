@@ -93,6 +93,7 @@ way I like to keep the contents of that file within a dedicated password manager
 | [git](git/)                                         | Some nice configuration specifically for work                                                          |
 | [gitu](gitu/)                                       | TUI for git interaction, based on magit                                                                |
 | [glab](glab/)                                       | GitLab CLI tool for interacting with GitLab APIs                                                       |
+| [homebrew](homebrew/)                               | The Missing Package Manager for macOS (or Linux)                                                       |
 | [just](just/)                                       | A command runner, inspired by make but much better                                                     |
 | [just-lsp](just-lsp/)                               | LSP server for Just                                                                                    |
 | [lazydocker](lazydocker/)                           | TUI for managing local docker containers                                                               |
