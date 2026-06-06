@@ -78,6 +78,7 @@ way I like to keep the contents of that file within a dedicated password manager
 | [bash-language-server](bash-language-server/)       | LSP server for bash and sh                                                                             |
 | [bump-my-version](bump-my-version/)                 | CLI for applying semver practices to git repos                                                         |
 | [bun](bun/)                                         | Fast JavaScript runtime and package manager                                                            |
+| [copier](copier/)                                   | A library and CLI app for rendering project templates.                                                 |
 | [cruft](cruft/)                                     | CookieCutter template manager                                                                          |
 | [d2](d2/)                                           | Modern diagram scripting language that turns text into diagrams                                        |
 | [delta](delta/)                                     | Syntax-highlighting pager for git diffs                                                                |
