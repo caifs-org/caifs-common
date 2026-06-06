@@ -94,6 +94,7 @@ way I like to keep the contents of that file within a dedicated password manager
 | [gitu](gitu/)                                       | TUI for git interaction, based on magit                                                                |
 | [glab](glab/)                                       | GitLab CLI tool for interacting with GitLab APIs                                                       |
 | [homebrew](homebrew/)                               | The Missing Package Manager for macOS (or Linux)                                                       |
+| [jq](jq/)                                           | lightweight and flexible command-line JSON processor akin to sed,awk,grep                              |
 | [just](just/)                                       | A command runner, inspired by make but much better                                                     |
 | [just-lsp](just-lsp/)                               | LSP server for Just                                                                                    |
 | [lazydocker](lazydocker/)                           | TUI for managing local docker containers                                                               |
