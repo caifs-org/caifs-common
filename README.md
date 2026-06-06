@@ -142,6 +142,47 @@ For example, the following will attempt to install `poetry` version 1.8.2, in th
 
 `POETRY_VERSION=1.8.2 caifs add poetry`
 
+### Writing hooks for custom machine types
+
+When required to write generic wrappers such as for `linux` or `generic` hooks, consider using the following to derive
+the appropriate architecture and form subsequent download links
+
+``` shell
+linux() {
+    MACHINE_TYPE="$(uname -m)"
+    case $MACHINE_TYPE in
+        i386 | i486 | i586 | i686 | i786 | x86)
+            ARCH="386"
+            ;;
+        amd64 | x86_64 | x64)
+            ARCH="amd64"
+            ;;
+        arm | armv7l)
+            ARCH="arm"
+            ;;
+        aarch64)
+            ARCH="arm64"
+            ;;
+        s390x)
+            ARCH="s390x"
+            ;;
+        ppc64)
+           ARCH="ppc64"
+           ;;
+        ppc64le)
+           ARCH="ppc64le"
+           ;;
+        *)
+            echo "Unknown machine type: $MACHINE_TYPE"
+            exit 1
+            ;;
+    esac
+
+    # form the github release filename
+    filename="some-cool-binary-linux-${ARCH}.tar.gz"
+}
+```
+
 ### Docker community edition
 
 Installs docker engine, cli and all the bits and pieces required for docker development.
@@ -163,7 +204,8 @@ The install occurs via the currently recommended way on <https://docs.astral.sh/
 
 ### Various UV tools
 
-Tools like pre-commit, just, ruff, ansible etc which can be installed via the `uv tool install`.
+Tools like pre-commit, just, ruff, ansible etc which can be installed via the `uv tool install`, which is provided by
+CAIFS as a wrapper, `uv_install`. This ensures ownership and custom link roots are respected
 
 This is considered best practice for non system wide installs and hence is the preferred method when available
 
