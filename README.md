@@ -99,6 +99,7 @@ way I like to keep the contents of that file within a dedicated password manager
 | [just-lsp](just-lsp/)                               | LSP server for Just                                                                                    |
 | [lazydocker](lazydocker/)                           | TUI for managing local docker containers                                                               |
 | [marksman](marksman/)                               | LSP server for Markdown                                                                                |
+| [netrc](netrc/)                                     | A small go utility to interact with .netrc files                                                       |
 | [nodejs](nodejs/)                                   | Javascript runtime (mainly used for managing packages via this tool) see NVM                           |
 | [nvm](nvm/)                                         | Manage multiple node versions                                                                          |
 | [oras](oras/)                                       | CLI tool for interfacing with OCI objects                                                              |
