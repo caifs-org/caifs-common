@@ -106,6 +106,7 @@ way I like to keep the contents of that file within a dedicated password manager
 | [pandoc](pandoc/)                                   | Markup conversion tool                                                                                 |
 | [poetry](poetry/)                                   | A perfectly fine python project management tool, but deprecated in favour of uv now                    |
 | [pre-commit](pre-commit/)                           | Run checks and validation before committing to git                                                     |
+| [prek](prek/)                                       | prek is a reimagined version of pre-commit, built in Rust.                                                                                                       |
 | [pycharm](pycharm/)                                 | JetBrains Python IDE                                                                                   |
 | [pyrefly](pyrefly/)                                 | A fast type checker and language server for Python with powerful IDE features                          |
 | [pyright](pyright/)                                 | Microsoft Python language server                                                                       |
