@@ -5,3 +5,5 @@ Agentic CLI tool designed to help developers write, test and debug code from the
 ## Notes
 
 Installation taken from <https://kiro.dev/docs/cli/installation/>
+
+kiro-cli does not support homebrew, so this is a purely `generic` hook install
