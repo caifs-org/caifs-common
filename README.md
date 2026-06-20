@@ -97,6 +97,7 @@ way I like to keep the contents of that file within a dedicated password manager
 | [jq](jq/)                                           | lightweight and flexible command-line JSON processor akin to sed,awk,grep                              |
 | [just](just/)                                       | A command runner, inspired by make but much better                                                     |
 | [just-lsp](just-lsp/)                               | LSP server for Just                                                                                    |
+| [kiro-cli](kiro-cli/)                               | Kiro Agentic command-line interface only                                                               |
 | [lazydocker](lazydocker/)                           | TUI for managing local docker containers                                                               |
 | [marksman](marksman/)                               | LSP server for Markdown                                                                                |
 | [netrc](netrc/)                                     | A small go utility to interact with .netrc files                                                       |
@@ -106,7 +107,7 @@ way I like to keep the contents of that file within a dedicated password manager
 | [pandoc](pandoc/)                                   | Markup conversion tool                                                                                 |
 | [poetry](poetry/)                                   | A perfectly fine python project management tool, but deprecated in favour of uv now                    |
 | [pre-commit](pre-commit/)                           | Run checks and validation before committing to git                                                     |
-| [prek](prek/)                                       | prek is a reimagined version of pre-commit, built in Rust.                                                                                                       |
+| [prek](prek/)                                       | prek is a reimagined version of pre-commit, built in Rust.                                             |
 | [pycharm](pycharm/)                                 | JetBrains Python IDE                                                                                   |
 | [pyrefly](pyrefly/)                                 | A fast type checker and language server for Python with powerful IDE features                          |
 | [pyright](pyright/)                                 | Microsoft Python language server                                                                       |
