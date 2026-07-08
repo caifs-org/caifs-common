@@ -1,12 +1,14 @@
 #!/bin/sh
 
-COLLECTION_NAME="caifs-common"
-LOCAL_CAIFS_COLLECTION_DIR="$HOME/.local/share/caifs-collections/"
+INSTALL_PREFIX=${INSTALL_PREFIX:=$HOME/.local/share/caifs-collections}
+CAIFS_COMMON_VERSION="latest"
 
-LATEST_VERSION=$(curl -sL https://api.github.com/repos/caifs-org/caifs-common/releases/latest?per_page=1 \
-                     | tr -d '[:space:]' \
-                     | sed -E 's/.*"tag_name":"v?([^"]+)".*/\1/')
+mkdir -p "$INSTALL_PREFIX"
 
-mkdir -p "$LOCAL_CAIFS_COLLECTION_DIR"
-curl -sL https://github.com/caifs-org/caifs-common/releases/download/v"$LATEST_VERSION"/release.tar.gz \
-    | tar vzxf - -C "$LOCAL_CAIFS_COLLECTION_DIR"
+if [ "${CAIFS_COMMON_VERSION}" = "latest" ]; then
+    DOWNLOAD_URL="https://github.com/caifs-org/caifs-common/releases/${CAIFS_COMMON_VERSION}/download/release.tar.gz"
+else
+    DOWNLOAD_URL="https://github.com/caifs-org/caifs-common/releases/download/${CAIFS_COMMON_VERSION}/release.tar.gz"
+fi
+
+curl -sL "${DOWNLOAD_URL}" | tar zvxf - -C "${INSTALL_PREFIX}"

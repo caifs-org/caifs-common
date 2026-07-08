@@ -9,3 +9,5 @@
 Justfile
 README.md
 checker.sh
+Dockerfile
+install.sh
