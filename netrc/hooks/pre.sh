@@ -16,7 +16,7 @@ generic() {
     LOWER_OS_TYPE=$(echo "$OS_TYPE" | tr '[:upper:]' '[:lower:]')
 
     LATEST_VERSION=$(github_latest_tag "dokku/netrc")
-    VERSION=${DIVE_VERSION:=$LATEST_VERSION}
+    VERSION=${TARGET_VERSION:=$LATEST_VERSION}
     FILENAME="netrc-${LOWER_OS_TYPE}-${ARCH}"
     curl -sfLo "${CAIFS_INSTALL_DIR}"/bin/netrc "https://github.com/dokku/netrc/releases/download/v${VERSION}/${FILENAME}"
     chmod -v +x "${CAIFS_INSTALL_DIR}"/bin/netrc

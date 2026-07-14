@@ -28,7 +28,7 @@ macos() {
 linux() {
     # Fallback for Linux distros without package manager support
     LATEST_VERSION=$(github_latest_tag "dandavison/delta")
-    VERSION=${DELTA_VERSION:=$LATEST_VERSION}
+    VERSION=${TARGET_VERSION:=$LATEST_VERSION}
     FILENAME="delta-${VERSION}-$(uname -m)-unknown-linux-gnu"
     curl -fOL "https://github.com/dandavison/delta/releases/download/${VERSION}/${FILENAME}.tar.gz"
     tar -vxzf "${FILENAME}.tar.gz"

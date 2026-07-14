@@ -35,7 +35,7 @@ linux() {
     esac
 
     LATEST_VERSION=$(github_latest_tag "aquasecurity/trivy")
-    VERSION=${TRIVY_VERSION:=$LATEST_VERSION}
+    VERSION=${TARGET_VERSION:=$LATEST_VERSION}
     FILENAME="trivy_${VERSION}_Linux-${ARCH}.tar.gz"
 
     echo "Fetching $FILENAME"

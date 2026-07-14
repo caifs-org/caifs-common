@@ -10,7 +10,7 @@ macos() {
 
 linux() {
     LATEST_VERSION=$(github_latest_tag "terrastruct/d2")
-    VERSION=${D2_VERSION:=$LATEST_VERSION}
+    VERSION=${TARGET_VERSION:=$LATEST_VERSION}
 
     ARCH=$(uname -m)
     case "$ARCH" in
@@ -30,7 +30,7 @@ linux() {
 
 darwin() {
     LATEST_VERSION=$(github_latest_tag "terrastruct/d2")
-    VERSION=${D2_VERSION:=$LATEST_VERSION}
+    VERSION=${TARGET_VERSION:=$LATEST_VERSION}
 
     ARCH=$(uname -m)
     case "$ARCH" in

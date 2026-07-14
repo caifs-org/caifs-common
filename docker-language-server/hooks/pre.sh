@@ -1,6 +1,6 @@
 linux () {
     LATEST_VERSION=$(github_latest_tag "docker/docker-language-server")
-    VERSION=${DOCKER_LANGUAGE_SERVER_VERSION:=$LATEST_VERSION}
+    VERSION=${TARGET_VERSION:=$LATEST_VERSION}
     FILENAME=docker-language-server-linux-amd64-v${VERSION}
     curl -sL \
          --output "${CAIFS_INSTALL_DIR}"/bin/docker-language-server \

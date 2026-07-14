@@ -43,7 +43,7 @@ linux() {
     esac
 
     LATEST_VERSION=$(github_latest_tag "terror/just-lsp")
-    VERSION=${JUST_LSP_VERSION:=$LATEST_VERSION}
+    VERSION=${TARGET_VERSION:=$LATEST_VERSION}
 
     FILENAME="just-lsp-${VERSION}-${ARCH}-unknown-linux-gnu.tar.gz"
     curl -sLO https://github.com/terror/just-lsp/releases/download/${VERSION}/${FILENAME}

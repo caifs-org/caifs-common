@@ -38,7 +38,7 @@ linux() {
     esac
 
     LATEST_VERSION=$(github_latest_tag "EdJoPaTo/mqttui")
-    VERSION=${MQTTUI_VERSION:-$LATEST_VERSION}
+    VERSION=${TARGET_VERSION:-$LATEST_VERSION}
 
     FILENAME="mqttui-v${VERSION}-${ARCH}-unknown-linux-gnu.tar.gz"
     curl -sL "https://github.com/EdJoPaTo/mqttui/releases/download/v${VERSION}/$FILENAME" | tar -zvxf -
