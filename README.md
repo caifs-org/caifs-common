@@ -6,13 +6,24 @@ A collection of CAIFS enabled installers and general purpose configuration that 
 This common library also acts as an awesome-lite list of good development software, with the benefit of being able to
 see how the specific software can be installed, in a succinct way rather than trawling through various docs.
 
+The caifs-common library prioritises local user level installs by default, using `uv` and `npm` to manage per-user
+installs of software, where appropriate. Where required, system level package managers are used which generally will
+prompt for passwords (if required) via sudo/su.
+
+On MacOS, `homebrew` is preferred, with the fall backs to `uv` and `npm` for packages that aren't provided by homebrew,
+and direct installs to `~/.local` for everything else.
+
 ## Installation
 
 See the readme for instructions on how to install the CAIFS installer at <https://github.com/caifs-org/caifs>
 
-To enable this repository, pick one of the following
+To enable this repository, pick one of the following:
 
-### Git Clone method
+> [!IMPORTANT]
+> It is generally advisable to always run `caifs add caifs-bootstrap` as your first task, as this will enable the
+> uv and npm installers which are used throughout this library.
+
+### Git Clone method (Recommended for users who contribute to caifs-common)
 
 ``` shell
 git clone https://github.com/caifs-org/caifs-common.git
@@ -23,7 +34,7 @@ ln -s $PWD/caifs-common $HOME/.local/share/caifs-collections/caifs-common
 caifs add fzf
 ```
 
-### Static Release method
+### Static Release method (Recommended for general consumers)
 
 ``` shell
 curl -sL https://raw.githubusercontent.com/caifs-org/caifs-common/refs/heads/main/install.sh | sh
@@ -78,6 +89,7 @@ way I like to keep the contents of that file within a dedicated password manager
 | [bash-language-server](bash-language-server/)       | LSP server for bash and sh                                                                             |
 | [bump-my-version](bump-my-version/)                 | CLI for applying semver practices to git repos                                                         |
 | [bun](bun/)                                         | Fast JavaScript runtime and package manager                                                            |
+| [caifs-bootstrap](caifs-bootstrap/)                 | The initial bootstrapping target to install various installers like `uv` and `npm`                     |
 | [copier](copier/)                                   | A library and CLI app for rendering project templates.                                                 |
 | [cruft](cruft/)                                     | CookieCutter template manager                                                                          |
 | [d2](d2/)                                           | Modern diagram scripting language that turns text into diagrams                                        |

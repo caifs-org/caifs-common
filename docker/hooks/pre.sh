@@ -4,15 +4,15 @@
 arch() {
     yay_install docker docker-buildx docker-compose docker-model-bin
     rootdo systemctl enable --now docker
-    rootdo usermod -a -G docker,wheel $USER
+    rootdo usermod -a -G docker,wheel "$CAIFS_USER"
 }
 
 fedora() {
-    rootdo dnf config-manager addrepo --from-repofile https://download.docker.com/linux/$OS_ID/docker-ce.repo
+    rootdo dnf config-manager addrepo --from-repofile https://download.docker.com/linux/"$OS_ID"/docker-ce.repo
     rootdo dnf update
     rootdo dnf install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
     rootdo systemctl enable --now docker
-    rootdo usermod -a -G docker,wheel $USER
+    rootdo usermod -a -G docker,wheel "$CAIFS_USER"
 }
 
 debian() {
@@ -35,7 +35,7 @@ EOF
     rootdo apt update
     rootdo apt install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
     rootdo systemctl enable --now docker
-    rootdo usermod -a -G docker,wheel $USER
+    rootdo usermod -a -G docker,wheel "$CAIFS_USER"
 }
 
 ubuntu() {
@@ -58,5 +58,5 @@ EOF
     rootdo apt update
     rootdo apt install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
     rootdo systemctl enable --now docker
-    rootdo usermod -a -G docker,wheel $USER
+    rootdo usermod -a -G docker,wheel "$CAIFS_USER"
 }
