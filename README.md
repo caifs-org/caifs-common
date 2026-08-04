@@ -106,6 +106,7 @@ way I like to keep the contents of that file within a dedicated password manager
 | [git](git/)                                               | Some nice configuration specifically for work                                                          |
 | [gitu](gitu/)                                             | TUI for git interaction, based on magit                                                                |
 | [glab](glab/)                                             | GitLab CLI tool for interacting with GitLab APIs                                                       |
+| [hadolint](hadolint/)                                     | Dockerfile linter that helps you build best practice Docker image                                      |
 | [homebrew](homebrew/)                                     | The Missing Package Manager for macOS (or Linux)                                                       |
 | [jq](jq/)                                                 | lightweight and flexible command-line JSON processor akin to sed,awk,grep                              |
 | [just](just/)                                             | A command runner, inspired by make but much better                                                     |

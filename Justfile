@@ -75,3 +75,9 @@ generate-target-readmes:
     EOF
     done
     echo "Done generating readmes for all targets"
+
+[doc('Creates the scafolding for a new target')]
+[script]
+generate-new-target target_name:
+    mkdir -p {{ target_name }}/config {{ target_name }}/hooks
+    echo "# {{ target_name }}\n\n## Notes" > {{ target_name }}/readme.md
