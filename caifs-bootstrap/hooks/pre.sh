@@ -6,11 +6,15 @@ fedora() {
     rootdo dnf install -y https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-"$(rpm -E %fedora)".noarch.rpm
     rootdo dnf install -y https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-"$(rpm -E %fedora)".noarch.rpm
     rootdo dnf install -y curl
+
+    generic
 }
 
 debian() {
     rootdo apt-get update
     rootdo apt-get install -y curl
+
+    generic
 }
 
 steamos() {
@@ -20,7 +24,7 @@ steamos() {
     rootdo pacman-key --populate holo
 
     # run the arch method now to get yay
-    arch
+    generic
 }
 
 
@@ -33,4 +37,11 @@ arch() {
         makepkg -si --noconfirm
         yay -S yay
     fi
+
+    generic
+}
+
+generic() {
+    echo "Installing required installers for uv and npm based installs"
+    caifs add uv nodejs
 }

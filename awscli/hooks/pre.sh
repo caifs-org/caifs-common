@@ -15,7 +15,7 @@ linux() {
 
     mv tmp/awscli/v2/"$version" "${CAIFS_INSTALL_DIR}"/lib/awscli
 
-    cd "${CAIFS_INSTALL_DIR}"/bin
+    cd "${CAIFS_INSTALL_DIR}"/bin || exit
     ln -s ../lib/awscli/bin/aws aws
     ln -s ../lib/awscli/bin/aws_completer aws_completer
 

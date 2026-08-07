@@ -6,13 +6,25 @@ A collection of CAIFS enabled installers and general purpose configuration that 
 This common library also acts as an awesome-lite list of good development software, with the benefit of being able to
 see how the specific software can be installed, in a succinct way rather than trawling through various docs.
 
+The caifs-common library prioritises local user level installs by default, using `uv` and `npm` to manage per-user
+installs of software, where appropriate. Where required, system level package managers are used which generally will
+prompt for passwords (if required) via sudo/su.
+
+On MacOS, `homebrew` is preferred, with the fall backs to `uv` and `npm` for packages that aren't provided by homebrew,
+and direct installs to `~/.local` for everything else.
+
 ## Installation
 
 See the readme for instructions on how to install the CAIFS installer at <https://github.com/caifs-org/caifs>
 
-To enable this repository, pick one of the following
+To enable this repository, pick one of the following:
 
-### Git Clone method
+> [!IMPORTANT]
+> It is generally advisable to always run `caifs add caifs-bootstrap` as your first task, as this will enable the
+> `uv` and `npm` installers which are used throughout this library. It is not required though, but targets that require
+> either `npm` or `uv` will throw an error.
+
+### Git Clone method (Recommended for users who contribute to caifs-common)
 
 ``` shell
 git clone https://github.com/caifs-org/caifs-common.git
@@ -23,7 +35,7 @@ ln -s $PWD/caifs-common $HOME/.local/share/caifs-collections/caifs-common
 caifs add fzf
 ```
 
-### Static Release method
+### Static Release method (Recommended for general consumers)
 
 ``` shell
 curl -sL https://raw.githubusercontent.com/caifs-org/caifs-common/refs/heads/main/install.sh | sh
@@ -68,63 +80,69 @@ way I like to keep the contents of that file within a dedicated password manager
 
 ## Supported installs
 
-| Software target                                     | Description                                                                                            |
-|:----------------------------------------------------|:-------------------------------------------------------------------------------------------------------|
-| [ansible](ansible/)                                 | Configuration automation tool                                                                          |
-| [ansible-language-server](ansible-language-server/) | Ansible Language server for auto-completion and linting                                                |
-| [awscli](awscli/)                                   | Official AWS CLI                                                                                       |
-| [azure-cli](azure-cli/)                             | Official Azure CLI                                                                                     |
-| [basedpyright](basedpyright/)                       | A based version of the pyright lang server with saner defaults                                         |
-| [bash-language-server](bash-language-server/)       | LSP server for bash and sh                                                                             |
-| [bump-my-version](bump-my-version/)                 | CLI for applying semver practices to git repos                                                         |
-| [bun](bun/)                                         | Fast JavaScript runtime and package manager                                                            |
-| [copier](copier/)                                   | A library and CLI app for rendering project templates.                                                 |
-| [cruft](cruft/)                                     | CookieCutter template manager                                                                          |
-| [d2](d2/)                                           | Modern diagram scripting language that turns text into diagrams                                        |
-| [delta](delta/)                                     | Syntax-highlighting pager for git diffs                                                                |
-| [devcontainers](devcontainers/)                     | Docker containers specifically configured to provide a full-featured, isolated development environment |
-| [direnv](direnv/)                                   | Manage environment variables per directory                                                             |
-| [dive](dive/)                                       | TUI tool for inspecting docker images                                                                  |
-| [docker](docker/)                                   | Docker community edition engine & CLI tooling                                                          |
-| [docker-cli](docker-cli/)                           | Docker CE CLI tooling only, no engine install                                                          |
-| [docker-language-server](docker-language-server/)   | Docker language server for auto-completion in IDEs                                                     |
-| [fd](fd/)                                           | Fast find alternative written in Rust                                                                  |
-| [fzf](fzf/)                                         | Fast fuzzy finder utility                                                                              |
-| [git](git/)                                         | Some nice configuration specifically for work                                                          |
-| [gitu](gitu/)                                       | TUI for git interaction, based on magit                                                                |
-| [glab](glab/)                                       | GitLab CLI tool for interacting with GitLab APIs                                                       |
-| [homebrew](homebrew/)                               | The Missing Package Manager for macOS (or Linux)                                                       |
-| [jq](jq/)                                           | lightweight and flexible command-line JSON processor akin to sed,awk,grep                              |
-| [just](just/)                                       | A command runner, inspired by make but much better                                                     |
-| [just-lsp](just-lsp/)                               | LSP server for Just                                                                                    |
-| [kiro-cli](kiro-cli/)                               | Kiro Agentic command-line interface only                                                               |
-| [lazydocker](lazydocker/)                           | TUI for managing local docker containers                                                               |
-| [marksman](marksman/)                               | LSP server for Markdown                                                                                |
-| [netrc](netrc/)                                     | A small go utility to interact with .netrc files                                                       |
-| [nodejs](nodejs/)                                   | Javascript runtime (mainly used for managing packages via this tool) see NVM                           |
-| [nvm](nvm/)                                         | Manage multiple node versions                                                                          |
-| [oras](oras/)                                       | CLI tool for interfacing with OCI objects                                                              |
-| [pandoc](pandoc/)                                   | Markup conversion tool                                                                                 |
-| [poetry](poetry/)                                   | A perfectly fine python project management tool, but deprecated in favour of uv now                    |
-| [pre-commit](pre-commit/)                           | Run checks and validation before committing to git                                                     |
-| [prek](prek/)                                       | prek is a reimagined version of pre-commit, built in Rust.                                             |
-| [pycharm](pycharm/)                                 | JetBrains Python IDE                                                                                   |
-| [pyrefly](pyrefly/)                                 | A fast type checker and language server for Python with powerful IDE features                          |
-| [pyright](pyright/)                                 | Microsoft Python language server                                                                       |
-| [ripgrep](ripgrep/)                                 | A faster, enhanced version of grep. Often integrated into editors                                      |
-| [ruff](ruff/)                                       | Extremely fast linter for Python                                                                       |
-| [rumdl](rumdl/)                                     | A modern Markdown linter and formatter, built for speed with Rust                                      |
-| [shellcheck](shellcheck/)                           | Static analysis tool for shell scripts                                                                 |
-| [shfmt](shfmt/)                                     | Shell script formatter                                                                                 |
-| [ssh](ssh/)                                         | SSH config.d directory setup                                                                           |
-| [starship](starship/)                               | A terminal prompt prettier, written in Rust                                                            |
-| [terraform](terraform/)                             | Infrastructure as code tool by HashiCorp                                                               |
-| [tmux](tmux/)                                       | A terminal multiplexer                                                                                 |
-| [trivy](trivy/)                                     | Container image scanning tool                                                                          |
-| [ty](ty/)                                           | An extremely fast python type checker and language server from Astral                                  |
-| [uv](uv/)                                           | Python dependency management                                                                           |
-| [watchexec](watchexec/)                             | Monitor file changes and run commands                                                                  |
-| [yaml-language-server](yaml-language-server/)       | YAML language server, for auto-completion                                                              |
+| Software target                                           | Description                                                                                            |
+|:----------------------------------------------------------|:-------------------------------------------------------------------------------------------------------|
+| [ansible](ansible/)                                       | Configuration automation tool                                                                          |
+| [ansible-language-server](ansible-language-server/)       | Ansible Language server for auto-completion and linting                                                |
+| [awscli](awscli/)                                         | Official AWS CLI                                                                                       |
+| [azure-cli](azure-cli/)                                   | Official Azure CLI                                                                                     |
+| [basedpyright](basedpyright/)                             | A based version of the pyright lang server with saner defaults                                         |
+| [bash-language-server](bash-language-server/)             | LSP server for bash and sh                                                                             |
+| [bump-my-version](bump-my-version/)                       | CLI for applying semver practices to git repos                                                         |
+| [bun](bun/)                                               | Fast JavaScript runtime and package manager                                                            |
+| [caifs-bootstrap](caifs-bootstrap/)                       | The initial bootstrapping target to install various installers like `uv` and `npm`                     |
+| [copier](copier/)                                         | A library and CLI app for rendering project templates.                                                 |
+| [cruft](cruft/)                                           | CookieCutter template manager                                                                          |
+| [d2](d2/)                                                 | Modern diagram scripting language that turns text into diagrams                                        |
+| [delta](delta/)                                           | Syntax-highlighting pager for git diffs                                                                |
+| [devcontainers](devcontainers/)                           | Docker containers specifically configured to provide a full-featured, isolated development environment |
+| [direnv](direnv/)                                         | Manage environment variables per directory                                                             |
+| [dive](dive/)                                             | TUI tool for inspecting docker images                                                                  |
+| [docker](docker/)                                         | Docker community edition engine & CLI tooling                                                          |
+| [docker-cli](docker-cli/)                                 | Docker CE CLI tooling only, no engine install                                                          |
+| [docker-language-server](docker-language-server/)         | Docker language server for auto-completion in IDEs                                                     |
+| [fd](fd/)                                                 | Fast find alternative written in Rust                                                                  |
+| [fzf](fzf/)                                               | Fast fuzzy finder utility                                                                              |
+| [git](git/)                                               | Some nice configuration specifically for work                                                          |
+| [gitlab-ci-local](gitlab-ci-local/)                       | Run gitlab CICD tasks locally                                                                          |
+| [gitu](gitu/)                                             | TUI for git interaction, based on magit                                                                |
+| [glab](glab/)                                             | GitLab CLI tool for interacting with GitLab APIs                                                       |
+| [hadolint](hadolint/)                                     | Dockerfile linter that helps you build best practice Docker image                                      |
+| [homebrew](homebrew/)                                     | The Missing Package Manager for macOS (or Linux)                                                       |
+| [jq](jq/)                                                 | lightweight and flexible command-line JSON processor akin to sed,awk,grep                              |
+| [just](just/)                                             | A command runner, inspired by make but much better                                                     |
+| [just-lsp](just-lsp/)                                     | LSP server for Just                                                                                    |
+| [kiro-cli](kiro-cli/)                                     | Kiro Agentic command-line interface only                                                               |
+| [kubectl](kubectl/)                                       | kubernetes command line interface                                                                      |
+| [lazydocker](lazydocker/)                                 | TUI for managing local docker containers                                                               |
+| [marksman](marksman/)                                     | LSP server for Markdown                                                                                |
+| [minikube](minikube/)                                     | Kubernetes dev environment                                                                             |
+| [netrc](netrc/)                                           | A small go utility to interact with .netrc files                                                       |
+| [nodejs](nodejs/)                                         | Javascript runtime (mainly used for managing packages via this tool) see NVM                           |
+| [nvm](nvm/)                                               | Manage multiple node versions                                                                          |
+| [oras](oras/)                                             | CLI tool for interfacing with OCI objects                                                              |
+| [pandoc](pandoc/)                                         | Markup conversion tool                                                                                 |
+| [poetry](poetry/)                                         | A perfectly fine python project management tool, but deprecated in favour of uv now                    |
+| [pre-commit](pre-commit/)                                 | Run checks and validation before committing to git                                                     |
+| [prek](prek/)                                             | prek is a reimagined version of pre-commit, built in Rust.                                             |
+| [pycharm](pycharm/)                                       | JetBrains Python IDE                                                                                   |
+| [pyrefly](pyrefly/)                                       | A fast type checker and language server for Python with powerful IDE features                          |
+| [pyright](pyright/)                                       | Microsoft Python language server                                                                       |
+| [ripgrep](ripgrep/)                                       | A faster, enhanced version of grep. Often integrated into editors                                      |
+| [ruff](ruff/)                                             | Extremely fast linter for Python                                                                       |
+| [rumdl](rumdl/)                                           | A modern Markdown linter and formatter, built for speed with Rust                                      |
+| [shellcheck](shellcheck/)                                 | Static analysis tool for shell scripts                                                                 |
+| [shfmt](shfmt/)                                           | Shell script formatter                                                                                 |
+| [ssh](ssh/)                                               | SSH config.d directory setup                                                                           |
+| [starship](starship/)                                     | A terminal prompt prettier, written in Rust                                                            |
+| [terraform](terraform/)                                   | Infrastructure as code tool by HashiCorp                                                               |
+| [tmux](tmux/)                                             | A terminal multiplexer                                                                                 |
+| [trivy](trivy/)                                           | Container image scanning tool                                                                          |
+| [ty](ty/)                                                 | An extremely fast python type checker and language server from Astral                                  |
+| [uv](uv/)                                                 | Python dependency management                                                                           |
+| [vscode-json-languageserver](vscode-json-languageserver/) | A JSON LSP server                                                                                      |
+| [watchexec](watchexec/)                                   | Monitor file changes and run commands                                                                  |
+| [yaml-language-server](yaml-language-server/)             | YAML language server, for auto-completion                                                              |
 
 > [!TIP]
 > All can be installed and configured via `caifs add <name of target>`

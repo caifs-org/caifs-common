@@ -1,3 +1,4 @@
+# shellcheck disable=SC2016
 
 generic() {
     curl -sSLO https://raw.githubusercontent.com/devcontainers/cli/main/scripts/install.sh

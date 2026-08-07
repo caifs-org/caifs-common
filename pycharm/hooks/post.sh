@@ -1,7 +1,5 @@
 #!/bin/sh
 
-
-
 linux() {
-    rootdo cp $HOME/.local/share/applications/pycharm.desktop /usr/local/share/applications/pycharm.desktop
+    rootdo cp "$HOME"/.local/share/applications/pycharm.desktop /usr/local/share/applications/pycharm.desktop
 }

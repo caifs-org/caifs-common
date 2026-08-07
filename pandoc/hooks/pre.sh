@@ -6,5 +6,5 @@ arch() {
 }
 
 fedora() {
-    rootdo dnf install -y pandoc
+    rootdo dnf install -y pandoc texlive-collection-latexrecommended
 }

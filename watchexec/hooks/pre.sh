@@ -13,7 +13,7 @@ fedora() {
     VERSION=${TARGET_VERSION:=$LATEST_VERSION}
     FILENAME="watchexec-${VERSION}-$(uname -m)-unknown-linux-gnu.rpm"
     curl -fOL "https://github.com/watchexec/watchexec/releases/download/v${VERSION}/${FILENAME}"
-    rootdo dnf install -y ${FILENAME}
+    rootdo dnf install -y "${FILENAME}"
 }
 
 debian() {
@@ -21,5 +21,5 @@ debian() {
     VERSION=${TARGET_VERSION:=$LATEST_VERSION}
     FILENAME="watchexec-${VERSION}-$(uname -m)-unknown-linux-gnu.deb"
     curl -fOL "https://github.com/watchexec/watchexec/releases/download/v${VERSION}/${FILENAME}"
-    rootdo apt install -y ${FILENAME}
+    rootdo apt-get install -y "${FILENAME}"
 }
