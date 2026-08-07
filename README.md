@@ -104,6 +104,7 @@ way I like to keep the contents of that file within a dedicated password manager
 | [fd](fd/)                                                 | Fast find alternative written in Rust                                                                  |
 | [fzf](fzf/)                                               | Fast fuzzy finder utility                                                                              |
 | [git](git/)                                               | Some nice configuration specifically for work                                                          |
+| [gitlab-ci-local](gitlab-ci-local/)                       | Run gitlab CICD tasks locally                                                                          |
 | [gitu](gitu/)                                             | TUI for git interaction, based on magit                                                                |
 | [glab](glab/)                                             | GitLab CLI tool for interacting with GitLab APIs                                                       |
 | [hadolint](hadolint/)                                     | Dockerfile linter that helps you build best practice Docker image                                      |
@@ -112,8 +113,10 @@ way I like to keep the contents of that file within a dedicated password manager
 | [just](just/)                                             | A command runner, inspired by make but much better                                                     |
 | [just-lsp](just-lsp/)                                     | LSP server for Just                                                                                    |
 | [kiro-cli](kiro-cli/)                                     | Kiro Agentic command-line interface only                                                               |
+| [kubectl](kubectl/)                                       | kubernetes command line interface                                                                      |
 | [lazydocker](lazydocker/)                                 | TUI for managing local docker containers                                                               |
 | [marksman](marksman/)                                     | LSP server for Markdown                                                                                |
+| [minikube](minikube/)                                     | Kubernetes dev environment                                                                             |
 | [netrc](netrc/)                                           | A small go utility to interact with .netrc files                                                       |
 | [nodejs](nodejs/)                                         | Javascript runtime (mainly used for managing packages via this tool) see NVM                           |
 | [nvm](nvm/)                                               | Manage multiple node versions                                                                          |
