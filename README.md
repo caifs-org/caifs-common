@@ -137,6 +137,7 @@ way I like to keep the contents of that file within a dedicated password manager
 | [starship](starship/)                                     | A terminal prompt prettier, written in Rust                                                            |
 | [terraform](terraform/)                                   | Infrastructure as code tool by HashiCorp                                                               |
 | [tmux](tmux/)                                             | A terminal multiplexer                                                                                 |
+| [trash-cli](trash-cli/)                                   | Command line interface to the freedesktop.org trashcan.                                                |
 | [trivy](trivy/)                                           | Container image scanning tool                                                                          |
 | [ty](ty/)                                                 | An extremely fast python type checker and language server from Astral                                  |
 | [uv](uv/)                                                 | Python dependency management                                                                           |
