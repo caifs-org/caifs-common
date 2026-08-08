@@ -1,4 +1,6 @@
 macos() {
+    # How to install homebrew first? I don't have a mac to try this out
+    has brew
     brew install coreutils curl
 }
 
@@ -6,15 +8,15 @@ fedora() {
     rootdo dnf install -y https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-"$(rpm -E %fedora)".noarch.rpm
     rootdo dnf install -y https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-"$(rpm -E %fedora)".noarch.rpm
     rootdo dnf install -y curl
-
-    generic
 }
 
 debian() {
     rootdo apt-get update
     rootdo apt-get install -y curl
+}
 
-    generic
+ubuntu() {
+    debian
 }
 
 steamos() {
@@ -22,11 +24,11 @@ steamos() {
     rootdo pacman-key --init
     rootdo pacman-key --populate archlinux
     rootdo pacman-key --populate holo
-
-    # run the arch method now to get yay
-    generic
 }
 
+alpine() {
+    rootdo apk add coreutils curl
+}
 
 arch() {
     rootdo pacman -S --needed --noconfirm base-devel curl git
@@ -38,10 +40,4 @@ arch() {
         yay -S yay
     fi
 
-    generic
-}
-
-generic() {
-    echo "Installing required installers for uv and npm based installs"
-    caifs add uv nodejs
 }
