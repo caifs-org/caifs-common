@@ -80,74 +80,75 @@ way I like to keep the contents of that file within a dedicated password manager
 
 ## Supported installs
 
-| Software target                                                                   | Description                                                                                            |
-|:----------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------|
-| [ansible](automation-workflow/ansible/)                                           | Configuration automation tool                                                                          |
-| [ansible-language-server](editors-ides/ansible-language-server/)                  | Ansible Language server for auto-completion and linting                                                |
-| [awscli](cloud-infra/awscli/)                                                     | Official AWS CLI                                                                                       |
-| [azure-cli](cloud-infra/azure-cli/)                                               | Official Azure CLI                                                                                     |
-| [basedpyright](editors-ides/basedpyright/)                                        | A based version of the pyright lang server with saner defaults                                         |
-| [bash-language-server](editors-ides/bash-language-server/)                        | LSP server for bash and sh                                                                             |
-| [bump-my-version](automation-workflow/bump-my-version/)                           | CLI for applying semver practices to git repos                                                         |
-| [bun](dev-environments/bun/)                                                      | Fast JavaScript runtime and package manager                                                            |
-| [caifs-bootstrap](bootstrap/caifs-bootstrap/)                                      | The initial bootstrapping target to install various installers like `uv` and `npm`                     |
-| [copier](automation-workflow/copier/)                                             | A library and CLI app for rendering project templates.                                                 |
-| [cruft](automation-workflow/cruft/)                                               | CookieCutter template manager                                                                          |
-| [d2](documentation/d2/)                                                            | Modern diagram scripting language that turns text into diagrams                                        |
-| [delta](cli-tools/delta/)                                                         | Syntax-highlighting pager for git diffs                                                                |
-| [devcontainers](dev-environments/devcontainers/)                                  | Docker containers specifically configured to provide a full-featured, isolated development environment |
-| [direnv](shell-terminal/direnv/)                                                  | Manage environment variables per directory                                                             |
-| [dive](cli-tools/dive/)                                                           | TUI tool for inspecting docker images                                                                  |
-| [docker](containerization/docker/)                                                | Docker community edition engine & CLI tooling                                                          |
-| [docker-clean](container-utilities/docker-clean/)                                 | Meta group for performing common clean up actions (use last)                                           |
-| [docker-cli](containerization/docker-cli/)                                        | Docker CE CLI tooling only, no engine install                                                          |
-| [docker-language-server](editors-ides/docker-language-server/)                    | Docker language server for auto-completion in IDEs                                                     |
-| [fd](cli-tools/fd/)                                                               | Fast find alternative written in Rust                                                                  |
-| [fzf](cli-tools/fzf/)                                                             | Fast fuzzy finder utility                                                                              |
-| [git](shell-terminal/git/)                                                        | Some nice configuration specifically for work                                                          |
-| [gitlab-ci-local](automation-workflow/gitlab-ci-local/)                           | Run gitlab CICD tasks locally                                                                          |
-| [gitu](cli-tools/gitu/)                                                           | TUI for git interaction, based on magit                                                                |
-| [glab](system-admin/glab/)                                                        | GitLab CLI tool for interacting with GitLab APIs                                                       |
-| [gosu](container-utilities/gosu/)                                                 | Simple Go-based setuid+setgid+setgroups+exec                                                           |
-| [hadolint](automation-workflow/hadolint/)                                         | Dockerfile linter that helps you build best practice Docker image                                      |
-| [homebrew](infrastructure/homebrew/)                                              | The Missing Package Manager for macOS (or Linux)                                                       |
-| [jq](cli-tools/jq/)                                                               | lightweight and flexible command-line JSON processor akin to sed,awk,grep                              |
-| [just](automation-workflow/just/)                                                 | A command runner, inspired by make but much better                                                     |
-| [just-lsp](editors-ides/just-lsp/)                                                | LSP server for Just                                                                                    |
-| [kiro-cli](cli-tools/kiro-cli/)                                                   | Kiro Agentic command-line interface only                                                               |
-| [kubectl](containerization/kubectl/)                                              | kubernetes command line interface                                                                      |
-| [lazydocker](cli-tools/lazydocker/)                                               | TUI for managing local docker containers                                                               |
-| [marksman](editors-ides/marksman/)                                                | LSP server for Markdown                                                                                |
-| [minikube](containerization/minikube/)                                            | Kubernetes dev environment                                                                             |
-| [netrc](system-admin/netrc/)                                                      | A small go utility to interact with .netrc files                                                       |
-| [nodejs](dev-environments/nodejs/)                                                | Javascript runtime (mainly used for managing packages via this tool) see NVM                           |
-| [nvm](dev-environments/nvm/)                                                      | Manage multiple node versions                                                                          |
-| [oras](cloud-infra/oras/)                                                         | CLI tool for interfacing with OCI objects                                                              |
-| [pandoc](documentation/pandoc/)                                                   | Markup conversion tool                                                                                 |
-| [poetry](dev-environments/poetry/)                                                | A perfectly fine python project management tool, but deprecated in favour of uv now                    |
-| [pre-commit](automation-workflow/pre-commit/)                                     | Run checks and validation before committing to git                                                     |
-| [prek](automation-workflow/prek/)                                                 | prek is a reimagined version of pre-commit, built in Rust.                                             |
-| [pycharm](misc/pycharm/)                                                          | JetBrains Python IDE                                                                                   |
-| [pyrefly](editors-ides/pyrefly/)                                                  | A fast type checker and language server for Python with powerful IDE features                          |
-| [pyright](editors-ides/pyright/)                                                  | Microsoft Python language server                                                                       |
-| [ripgrep](cli-tools/ripgrep/)                                                     | A faster, enhanced version of grep. Often integrated into editors                                      |
-| [ruff](misc/ruff/)                                                                | Extremely fast linter for Python                                                                       |
-| [rumdl](documentation/rumdl/)                                                     | A modern Markdown linter and formatter, built for speed with Rust                                      |
-| [shellcheck](cli-tools/shellcheck/)                                               | Static analysis tool for shell scripts                                                                 |
-| [shfmt](cli-tools/shfmt/)                                                         | Shell script formatter                                                                                 |
-| [ssh](shell-terminal/ssh/)                                                        | SSH config.d directory setup                                                                           |
-| [starship](shell-terminal/starship/)                                              | A terminal prompt prettier, written in Rust                                                            |
-| [su-exec](container-utilities/su-exec/)                                           | switch user and group id, setgroups and exec, smaller alternative to gosu                              |
-| [terraform](cloud-infra/terraform/)                                               | Infrastructure as code tool by HashiCorp                                                               |
-| [tini](container-utilities/tini/)                                                 | A tiny but valid `init` for containers                                                                 |
-| [tmux](shell-terminal/tmux/)                                                      | A terminal multiplexer                                                                                 |
-| [trash-cli](cli-tools/trash-cli/)                                                 | Command line interface to the freedesktop.org trashcan.                                                |
-| [trivy](cloud-infra/trivy/)                                                       | Container image scanning tool                                                                          |
-| [ty](editors-ides/ty/)                                                            | An extremely fast python type checker and language server from Astral                                  |
-| [uv](dev-environments/uv/)                                                        | Python dependency management                                                                           |
-| [vscode-json-languageserver](editors-ides/vscode-json-languageserver/)             | A JSON LSP server                                                                                      |
-| [watchexec](cli-tools/watchexec/)                                                 | Monitor file changes and run commands                                                                  |
-| [yaml-language-server](editors-ides/yaml-language-server/)                        | YAML language server, for auto-completion                                                              |
+| Software target                                                        | Description                                                                                            |
+|:-----------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------|
+| [ansible](automation-workflow/ansible/)                                | Configuration automation tool                                                                          |
+| [ansible-language-server](editors-ides/ansible-language-server/)       | Ansible Language server for auto-completion and linting                                                |
+| [awscli](cloud-infra/awscli/)                                          | Official AWS CLI                                                                                       |
+| [azure-cli](cloud-infra/azure-cli/)                                    | Official Azure CLI                                                                                     |
+| [basedpyright](editors-ides/basedpyright/)                             | A based version of the pyright lang server with saner defaults                                         |
+| [bash-language-server](editors-ides/bash-language-server/)             | LSP server for bash and sh                                                                             |
+| [bump-my-version](automation-workflow/bump-my-version/)                | CLI for applying semver practices to git repos                                                         |
+| [bun](dev-environments/bun/)                                           | Fast JavaScript runtime and package manager                                                            |
+| [caifs-bootstrap](bootstrap/caifs-bootstrap/)                          | The initial bootstrapping target to install various installers like `uv` and `npm`                     |
+| [copier](automation-workflow/copier/)                                  | A library and CLI app for rendering project templates.                                                 |
+| [cruft](automation-workflow/cruft/)                                    | CookieCutter template manager                                                                          |
+| [d2](documentation/d2/)                                                | Modern diagram scripting language that turns text into diagrams                                        |
+| [delta](cli-tools/delta/)                                              | Syntax-highlighting pager for git diffs                                                                |
+| [devcontainers](dev-environments/devcontainers/)                       | Docker containers specifically configured to provide a full-featured, isolated development environment |
+| [direnv](shell-terminal/direnv/)                                       | Manage environment variables per directory                                                             |
+| [dive](cli-tools/dive/)                                                | TUI tool for inspecting docker images                                                                  |
+| [docker](containerization/docker/)                                     | Docker community edition engine & CLI tooling                                                          |
+| [docker-clean](container-utilities/docker-clean/)                      | Meta group for performing common clean up actions (use last)                                           |
+| [docker-cli](containerization/docker-cli/)                             | Docker CE CLI tooling only, no engine install                                                          |
+| [docker-language-server](editors-ides/docker-language-server/)         | Docker language server for auto-completion in IDEs                                                     |
+| [fd](cli-tools/fd/)                                                    | Fast find alternative written in Rust                                                                  |
+| [fzf](cli-tools/fzf/)                                                  | Fast fuzzy finder utility                                                                              |
+| [git](shell-terminal/git/)                                             | Some nice configuration specifically for work                                                          |
+| [gitlab-ci-local](automation-workflow/gitlab-ci-local/)                | Run gitlab CICD tasks locally                                                                          |
+| [gitu](cli-tools/gitu/)                                                | TUI for git interaction, based on magit                                                                |
+| [glab](system-admin/glab/)                                             | GitLab CLI tool for interacting with GitLab APIs                                                       |
+| [gosu](container-utilities/gosu/)                                      | Simple Go-based setuid+setgid+setgroups+exec                                                           |
+| [hadolint](automation-workflow/hadolint/)                              | Dockerfile linter that helps you build best practice Docker image                                      |
+| [helix](editors-ides/helix/)                                           | A post-modern modal text editors                                                                       |
+| [homebrew](infrastructure/homebrew/)                                   | The Missing Package Manager for macOS (or Linux)                                                       |
+| [jq](cli-tools/jq/)                                                    | lightweight and flexible command-line JSON processor akin to sed,awk,grep                              |
+| [just](automation-workflow/just/)                                      | A command runner, inspired by make but much better                                                     |
+| [just-lsp](editors-ides/just-lsp/)                                     | LSP server for Just                                                                                    |
+| [kiro-cli](cli-tools/kiro-cli/)                                        | Kiro Agentic command-line interface only                                                               |
+| [kubectl](containerization/kubectl/)                                   | kubernetes command line interface                                                                      |
+| [lazydocker](cli-tools/lazydocker/)                                    | TUI for managing local docker containers                                                               |
+| [marksman](editors-ides/marksman/)                                     | LSP server for Markdown                                                                                |
+| [minikube](containerization/minikube/)                                 | Kubernetes dev environment                                                                             |
+| [netrc](system-admin/netrc/)                                           | A small go utility to interact with .netrc files                                                       |
+| [nodejs](dev-environments/nodejs/)                                     | Javascript runtime (mainly used for managing packages via this tool) see NVM                           |
+| [nvm](dev-environments/nvm/)                                           | Manage multiple node versions                                                                          |
+| [oras](cloud-infra/oras/)                                              | CLI tool for interfacing with OCI objects                                                              |
+| [pandoc](documentation/pandoc/)                                        | Markup conversion tool                                                                                 |
+| [poetry](dev-environments/poetry/)                                     | A perfectly fine python project management tool, but deprecated in favour of uv now                    |
+| [pre-commit](automation-workflow/pre-commit/)                          | Run checks and validation before committing to git                                                     |
+| [prek](automation-workflow/prek/)                                      | prek is a reimagined version of pre-commit, built in Rust.                                             |
+| [pycharm](misc/pycharm/)                                               | JetBrains Python IDE                                                                                   |
+| [pyrefly](editors-ides/pyrefly/)                                       | A fast type checker and language server for Python with powerful IDE features                          |
+| [pyright](editors-ides/pyright/)                                       | Microsoft Python language server                                                                       |
+| [ripgrep](cli-tools/ripgrep/)                                          | A faster, enhanced version of grep. Often integrated into editors                                      |
+| [ruff](misc/ruff/)                                                     | Extremely fast linter for Python                                                                       |
+| [rumdl](documentation/rumdl/)                                          | A modern Markdown linter and formatter, built for speed with Rust                                      |
+| [shellcheck](cli-tools/shellcheck/)                                    | Static analysis tool for shell scripts                                                                 |
+| [shfmt](cli-tools/shfmt/)                                              | Shell script formatter                                                                                 |
+| [ssh](shell-terminal/ssh/)                                             | SSH config.d directory setup                                                                           |
+| [starship](shell-terminal/starship/)                                   | A terminal prompt prettier, written in Rust                                                            |
+| [su-exec](container-utilities/su-exec/)                                | switch user and group id, setgroups and exec, smaller alternative to gosu                              |
+| [terraform](cloud-infra/terraform/)                                    | Infrastructure as code tool by HashiCorp                                                               |
+| [tini](container-utilities/tini/)                                      | A tiny but valid `init` for containers                                                                 |
+| [tmux](shell-terminal/tmux/)                                           | A terminal multiplexer                                                                                 |
+| [trash-cli](cli-tools/trash-cli/)                                      | Command line interface to the freedesktop.org trashcan.                                                |
+| [trivy](cloud-infra/trivy/)                                            | Container image scanning tool                                                                          |
+| [ty](editors-ides/ty/)                                                 | An extremely fast python type checker and language server from Astral                                  |
+| [uv](dev-environments/uv/)                                             | Python dependency management                                                                           |
+| [vscode-json-languageserver](editors-ides/vscode-json-languageserver/) | A JSON LSP server                                                                                      |
+| [watchexec](cli-tools/watchexec/)                                      | Monitor file changes and run commands                                                                  |
+| [yaml-language-server](editors-ides/yaml-language-server/)             | YAML language server, for auto-completion                                                              |
 
 > [!TIP]
 > All can be installed and configured via `caifs add <name of target>`
