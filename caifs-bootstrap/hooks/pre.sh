@@ -1,7 +1,7 @@
 macos() {
-    # How to install homebrew first? I don't have a mac to try this out
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
     has brew
-    brew install coreutils curl
+    brew install coreutils
 }
 
 fedora() {
@@ -33,7 +33,6 @@ alpine() {
 arch() {
     rootdo pacman -S --needed --noconfirm base-devel curl git
 
-    # yay, to install the good shit
     if ! has yay; then
         git clone https://aur.archlinux.org/yay.git yay
         makepkg -si --noconfirm
