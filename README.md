@@ -118,8 +118,10 @@ way I like to keep the contents of that file within a dedicated password manager
 | [kiro-cli](cli-tools/kiro-cli/)                                        | Kiro Agentic command-line interface only                                                               |
 | [kubectl](containerization/kubectl/)                                   | kubernetes command line interface                                                                      |
 | [lazydocker](cli-tools/lazydocker/)                                    | TUI for managing local docker containers                                                               |
+| [mark](misc/mark/)                                                     | Sync markdown documentation to Atlassian Confluence                                                    |
 | [marksman](editors-ides/marksman/)                                     | LSP server for Markdown                                                                                |
 | [minikube](containerization/minikube/)                                 | Kubernetes dev environment                                                                             |
+| [mqttui](misc/mqttui/)                                                 | TUI tool for MQTT interaction                                                                          |
 | [netrc](system-admin/netrc/)                                           | A small go utility to interact with .netrc files                                                       |
 | [nodejs](dev-environments/nodejs/)                                     | Javascript runtime (mainly used for managing packages via this tool) see NVM                           |
 | [nvm](dev-environments/nvm/)                                           | Manage multiple node versions                                                                          |
@@ -131,6 +133,7 @@ way I like to keep the contents of that file within a dedicated password manager
 | [pycharm](misc/pycharm/)                                               | JetBrains Python IDE                                                                                   |
 | [pyrefly](editors-ides/pyrefly/)                                       | A fast type checker and language server for Python with powerful IDE features                          |
 | [pyright](editors-ides/pyright/)                                       | Microsoft Python language server                                                                       |
+| [qemu](container-utilities/qemu/)                                      | CPU emulation framework for cross-architecture support                                                 |
 | [ripgrep](cli-tools/ripgrep/)                                          | A faster, enhanced version of grep. Often integrated into editors                                      |
 | [ruff](misc/ruff/)                                                     | Extremely fast linter for Python                                                                       |
 | [rumdl](documentation/rumdl/)                                          | A modern Markdown linter and formatter, built for speed with Rust                                      |
@@ -144,11 +147,13 @@ way I like to keep the contents of that file within a dedicated password manager
 | [tmux](shell-terminal/tmux/)                                           | A terminal multiplexer                                                                                 |
 | [trash-cli](cli-tools/trash-cli/)                                      | Command line interface to the freedesktop.org trashcan.                                                |
 | [trivy](cloud-infra/trivy/)                                            | Container image scanning tool                                                                          |
+| [typst](documentation/typst/)                                          | A markup-based typesetting system designed for academia                                                 |
 | [ty](editors-ides/ty/)                                                 | An extremely fast python type checker and language server from Astral                                  |
 | [uv](dev-environments/uv/)                                             | Python dependency management                                                                           |
 | [vscode-json-languageserver](editors-ides/vscode-json-languageserver/) | A JSON LSP server                                                                                      |
 | [watchexec](cli-tools/watchexec/)                                      | Monitor file changes and run commands                                                                  |
 | [yaml-language-server](editors-ides/yaml-language-server/)             | YAML language server, for auto-completion                                                              |
+| [xonsh](misc/xonsh/)                                                   | Python-powered shell with advanced features                                                            |
 
 > [!TIP]
 > All can be installed and configured via `caifs add <name of target>`

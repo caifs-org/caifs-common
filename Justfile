@@ -29,7 +29,20 @@ bump-version $patch="" $minor="" $major="" *args:
 [doc('Create release.tar.gz for distribution')]
 [script]
 create-release-tar:
-    tar --exclude-from .tarignore --transform 's,^,caifs-common/,' -czvf release.tar.gz *
+    tar -czvf release.tar.gz \
+    automation-workflow \
+    bootstrap \
+    cli-tools \
+    cloud-infra \
+    containerization \
+    container-utilities \
+    dev-environments \
+    documentation \
+    editors-ides \
+    infrastructure \
+    misc \
+    shell-terminal \
+    system-admin
 
 [doc('List contents of release tarball')]
 [script]
