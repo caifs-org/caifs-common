@@ -48,6 +48,8 @@ linux() {
     FILENAME="jq-linux-${ARCH}"
     curl -sLo "${CAIFS_INSTALL_DIR}/bin/jq" "https://github.com/jqlang/jq/releases/download/${VERSION}/${FILENAME}"
 
+    chmod +x "${CAIFS_INSTALL_DIR}/bin/jq"
+
     caifs_install
 
 }
