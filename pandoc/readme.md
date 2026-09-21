@@ -43,6 +43,11 @@ distribution package. Any other Linux distribution uses the `linux` hook,
 which installs the upstream binary from GitHub. Upstream builds this binary
 for amd64 and arm64 only.
 
+The upstream binary is statically linked, so it also runs on a musl system
+such as Alpine. It is large for this reason. Version 3.11 for amd64 is 160 MB
+on disk. The `linux` hook installs the `pandoc` program alone, and not
+`pandoc-server` or `pandoc-lua`.
+
 ## LaTeX engine
 
 pandoc needs a LaTeX engine to write PDF files. Each packaged platform
