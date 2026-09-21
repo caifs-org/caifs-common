@@ -138,10 +138,13 @@ way I like to keep the contents of that file within a dedicated password manager
 | [ssh](ssh/)                                               | SSH config.d directory setup                                                                           |
 | [starship](starship/)                                     | A terminal prompt prettier, written in Rust                                                            |
 | [terraform](terraform/)                                   | Infrastructure as code tool by HashiCorp                                                               |
+| [tinymist](tinymist/)                                     | Language server for typst                                                                              |
 | [tmux](tmux/)                                             | A terminal multiplexer                                                                                 |
 | [trash-cli](trash-cli/)                                   | Command line interface to the freedesktop.org trashcan.                                                |
 | [trivy](trivy/)                                           | Container image scanning tool                                                                          |
 | [ty](ty/)                                                 | An extremely fast python type checker and language server from Astral                                  |
+| [typst](typst/)                                           | Markup based typesetting system                                                                        |
+| [typstyle](typstyle/)                                     | Code formatter for typst                                                                               |
 | [uv](uv/)                                                 | Python dependency management                                                                           |
 | [vscode-json-languageserver](vscode-json-languageserver/) | A JSON LSP server                                                                                      |
 | [watchexec](watchexec/)                                   | Monitor file changes and run commands                                                                  |
