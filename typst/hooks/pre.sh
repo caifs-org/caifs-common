@@ -5,8 +5,10 @@
 #
 # typst is a static binary and needs nothing at runtime. pandoc is the
 # companion tool that converts markdown, docx and LaTeX to typst and back.
-# Arch and homebrew package typst. Fedora and Ubuntu do not, so they take
-# the upstream binary and get pandoc from the distro.
+# Arch and homebrew package typst. Fedora, Debian and Ubuntu do not, so they
+# take the upstream binary and get pandoc from the distro.
+#
+# The upstream release is a tar.xz archive, so the linux hook needs xz.
 
 arch() {
     yay_install typst pandoc
@@ -17,10 +19,14 @@ fedora() {
     linux
 }
 
-ubuntu() {
+debian() {
     rootdo apt-get update
     rootdo apt-get install -y pandoc xz-utils
     linux
+}
+
+ubuntu() {
+    debian
 }
 
 macos() {
@@ -28,6 +34,11 @@ macos() {
 }
 
 linux() {
+    if ! command -v xz > /dev/null 2>&1; then
+        log_error "xz is not installed. The typst release is a tar.xz archive."
+        exit 1
+    fi
+
     MACHINE_TYPE="$(uname -m)"
     case "$MACHINE_TYPE" in
         amd64 | x86_64 | x64)
