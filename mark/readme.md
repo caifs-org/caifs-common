@@ -12,5 +12,8 @@ mark
 
 ## Supported target systems
 
-- darwin
+- arch
+- fedora
 - linux
+- macos
+- ubuntu

@@ -115,9 +115,11 @@ way I like to keep the contents of that file within a dedicated password manager
 | [kiro-cli](kiro-cli/)                                     | Kiro Agentic command-line interface only                                                               |
 | [kubectl](kubectl/)                                       | kubernetes command line interface                                                                      |
 | [lazydocker](lazydocker/)                                 | TUI for managing local docker containers                                                               |
+| [mark](mark/)                                             | Sync markdown documentation to Atlassian Confluence                                                    |
 | [marksman](marksman/)                                     | LSP server for Markdown                                                                                |
 | [minikube](minikube/)                                     | Kubernetes dev environment                                                                             |
 | [netrc](netrc/)                                           | A small go utility to interact with .netrc files                                                       |
+| [nix](nix/)                                               | The purely functional package manager                                                                  |
 | [nodejs](nodejs/)                                         | Javascript runtime (mainly used for managing packages via this tool) see NVM                           |
 | [nvm](nvm/)                                               | Manage multiple node versions                                                                          |
 | [oras](oras/)                                             | CLI tool for interfacing with OCI objects                                                              |
