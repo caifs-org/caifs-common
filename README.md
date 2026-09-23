@@ -98,6 +98,7 @@ way I like to keep the contents of that file within a dedicated password manager
 | [devcontainers](devcontainers/)                           | Docker containers specifically configured to provide a full-featured, isolated development environment |
 | [direnv](direnv/)                                         | Manage environment variables per directory                                                             |
 | [dive](dive/)                                             | TUI tool for inspecting docker images                                                                  |
+| [distrobox](distrobox/)                                   | Run other Linux distributions in containers that share the host home directory                         |
 | [docker](docker/)                                         | Docker community edition engine & CLI tooling                                                          |
 | [docker-cli](docker-cli/)                                 | Docker CE CLI tooling only, no engine install                                                          |
 | [docker-language-server](docker-language-server/)         | Docker language server for auto-completion in IDEs                                                     |
