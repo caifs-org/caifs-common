@@ -121,6 +121,7 @@ way I like to keep the contents of that file within a dedicated password manager
 | [netrc](netrc/)                                           | A small go utility to interact with .netrc files                                                       |
 | [nix](nix/)                                               | The purely functional package manager                                                                  |
 | [nodejs](nodejs/)                                         | Javascript runtime (mainly used for managing packages via this tool) see NVM                           |
+| [nvidia-toolkit](nvidia-toolkit/)                         | NVIDIA Container Toolkit, gives a GPU to Docker containers                                             |
 | [nvm](nvm/)                                               | Manage multiple node versions                                                                          |
 | [oras](oras/)                                             | CLI tool for interfacing with OCI objects                                                              |
 | [pandoc](pandoc/)                                         | Markup conversion tool                                                                                 |
