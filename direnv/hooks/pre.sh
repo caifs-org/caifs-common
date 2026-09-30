@@ -8,3 +8,12 @@ arch() {
 fedora() {
     rootdo dnf install -y direnv
 }
+
+debian() {
+    rootdo apt update
+    rootdo apt install -y direnv
+}
+
+ubuntu() {
+    debian
+}

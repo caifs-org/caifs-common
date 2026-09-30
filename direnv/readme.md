@@ -19,4 +19,6 @@ direnv
 ## Supported target systems
 
 - arch
+- debian
 - fedora
+- ubuntu
