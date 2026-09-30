@@ -16,5 +16,7 @@ tmux
 ## Supported target systems
 
 - arch
+- debian
 - fedora
 - steamos
+- ubuntu

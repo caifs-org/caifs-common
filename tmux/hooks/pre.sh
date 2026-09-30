@@ -12,3 +12,12 @@ steamos() {
 fedora() {
     rootdo dnf install -y tmux
 }
+
+debian() {
+    rootdo apt update
+    rootdo apt install -y tmux
+}
+
+ubuntu() {
+    debian
+}
