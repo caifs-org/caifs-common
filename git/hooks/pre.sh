@@ -1,7 +1,12 @@
 #!/bin/sh
 
 debian() {
+    rootdo apt-get update
     rootdo apt-get install -y git
+}
+
+ubuntu() {
+    debian
 }
 
 fedora() {
